@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /grazie.html
+
+Sitemap: https://organiq-agency.it/sitemap.xml

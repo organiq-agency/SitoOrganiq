@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Check-up gratuito — I social servono al tuo business? | Organiq.</title>
+<meta name="description" content="Test gratuito in 2 minuti: scopri se e come i social possono far crescere la tua attività. Punteggio, profilo e consigli immediati dall'agenzia social media Organiq (Roma e tutta Italia).">
+<meta property="og:title" content="Social Check-up gratuito — I social servono al tuo business?">
+<meta property="og:description" content="8 domande, 2 minuti, risultato immediato. E se i social non sono la tua priorità, te lo diciamo onestamente.">
+<meta property="og:url" content="https://organiq-agency.it/check-up.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="canonical" href="https://organiq-agency.it/check-up.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="quiz-page">
+
+<div class="ambient" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="quiz-top">
+  <a class="nav-logo" href="index.html" aria-label="Organiq — Torna alla home">
+    <img src="assets/mark-mint.png" alt="" width="40" height="32">
+    Organiq<span class="accent">.</span>
+  </a>
+  <a class="quiz-exit" href="index.html">
+    Esci dal check-up
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </a>
+</header>
+
+<div class="quiz-progress" role="progressbar" aria-label="Avanzamento check-up" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+  <div class="quiz-progress-bar" id="progressBar"></div>
+</div>
+
+<main class="quiz-main">
+
+  <!-- INTRO -->
+  <div class="quiz-card quiz-fade" id="intro">
+    <span class="quiz-step-label">Social Check-up · Gratuito</span>
+    <h1 class="quiz-q">Scopri se — e come — i social possono far crescere il tuo business.</h1>
+    <p class="quiz-hint" style="margin-bottom:34px">8 domande, circa 2 minuti. Alla fine ricevi subito il tuo punteggio di Potenziale Social, il tuo profilo e i primi consigli concreti. E se i social non sono la tua priorità, te lo diciamo onestamente.</p>
+    <button class="btn btn-primary btn-lg" id="startBtn">
+      Inizia il check-up
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <p class="quiz-hint" style="margin-top:22px;margin-bottom:0">Preferisci parlare direttamente con noi? <a href="contatti.html" style="color:var(--mint);text-decoration:underline">Vai ai contatti</a></p>
+  </div>
+
+  <!-- DOMANDE (renderizzate da JS) -->
+  <div class="quiz-card" id="quizBox" hidden>
+    <span class="quiz-step-label" id="stepLabel">Domanda 1 di 8</span>
+    <h2 class="quiz-q" id="questionText"></h2>
+    <p class="quiz-hint" id="questionHint"></p>
+    <div class="quiz-options" id="options" role="group" aria-labelledby="questionText"></div>
+    <button class="quiz-back" id="backBtn" hidden>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      Domanda precedente
+    </button>
+  </div>
+
+  <!-- RISULTATO -->
+  <div class="result-wrap" id="result" hidden>
+    <div class="result-head">
+      <div class="result-gauge" aria-hidden="true">
+        <svg width="190" height="190" viewBox="0 0 190 190">
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2EF5CC"/>
+              <stop offset="100%" stop-color="#10C9A4"/>
+            </linearGradient>
+          </defs>
+          <circle class="gauge-bg" cx="95" cy="95" r="84" fill="none" stroke-width="12"/>
+          <circle class="gauge-fill" id="gaugeFill" cx="95" cy="95" r="84" fill="none" stroke-width="12"
+                  stroke-dasharray="527.8" stroke-dashoffset="527.8"/>
+        </svg>
+        <div class="gauge-num">
+          <strong id="scoreNum">0</strong>
+          <span>Potenziale social</span>
+        </div>
+      </div>
+      <div class="result-profile" id="profileBadge"></div>
+      <h2 id="profileTitle"></h2>
+      <p class="lead" id="profileDesc"></p>
+    </div>
+
+    <div class="result-tips">
+      <h3>I tuoi primi consigli concreti</h3>
+      <div id="tipsList"></div>
+    </div>
+
+    <div class="lead-box" id="leadBox">
+      <h3>Questo era il check-up. <span class="accent">Il piano completo è il passo dopo.</span></h3>
+      <p>Prenota un'analisi gratuita e senza impegno: guardiamo insieme la tua situazione reale e ti diciamo esattamente cosa faremmo, con che priorità e che risultati aspettarti.</p>
+      <form class="form-grid" id="leadForm" action="https://formsubmit.co/organiqsocialagency@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuovo lead dal Social Check-up — organiq-agency.it">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://organiq-agency.it/grazie.html">
+        <input type="hidden" name="Profilo" id="fProfile">
+        <input type="hidden" name="Punteggio" id="fScore">
+        <input type="hidden" name="Risposte" id="fAnswers">
+        <div class="form-field">
+          <label for="fName">Nome <span class="req">*</span></label>
+          <input type="text" id="fName" name="Nome" required autocomplete="name" placeholder="Il tuo nome">
+        </div>
+        <div class="form-field">
+          <label for="fBiz">Attività <span class="req">*</span></label>
+          <input type="text" id="fBiz" name="Attività" required autocomplete="organization" placeholder="Nome della tua attività">
+        </div>
+        <div class="form-field">
+          <label for="fEmail">Email <span class="req">*</span></label>
+          <input type="email" id="fEmail" name="Email" required autocomplete="email" placeholder="nome@esempio.it">
+        </div>
+        <div class="form-field">
+          <label for="fPhone">Telefono <span style="color:var(--text-faint);font-weight:400">(opzionale)</span></label>
+          <input type="tel" id="fPhone" name="Telefono" autocomplete="tel" placeholder="+39 …">
+        </div>
+        <p class="form-note">Inviando accetti la nostra <a href="privacy.html">privacy policy</a>. Nessuna newsletter, nessuno spam: ti contattiamo solo per l'analisi.</p>
+        <button type="submit" class="btn btn-primary btn-lg" id="leadSubmit">
+          Prenota l'analisi gratuita
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <p style="text-align:center;margin-top:30px">
+      <button class="quiz-back" id="restartBtn" style="margin:0">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        Rifai il check-up
+      </button>
+    </p>
+  </div>
+
+</main>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>
