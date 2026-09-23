@@ -1,0 +1,192 @@
+{
+  "counter": {
+    "base": 25000000,
+    "verified": false,
+    "increment": 600,
+    "intervalMs": 3000
+  },
+  "clients": [
+    {
+      "name": "Leone Master School",
+      "description": "Formazione, eventi e persone: contenuti che raccontano la scuola e la sua community.",
+      "category": "Formazione",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/leone.master.school",
+          "label": "Instagram"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "Leonardo Leone",
+      "description": "il profilo personale di un imprenditore trasformato in un canale di autorevolezza e acquisizione.",
+      "category": "Personal Brand",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/leonardo_leone_official",
+          "label": "Instagram"
+        }
+      ],
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DHbcJxiss21/",
+          "embed": "https://www.instagram.com/reel/DHbcJxiss21/embed/",
+          "views": 2000000
+        }
+      ]
+    },
+    {
+      "name": "Io Creo Il Mio Destino",
+      "description": "la community di un percorso formativo, alimentata con contenuti costanti e riconoscibili.",
+      "category": "Eventi & Community",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/iocreoilmiodestino_official",
+          "label": "Instagram"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "Cosplus3D",
+      "description": "designer di maschere per artisti: 42.000 follower costruiti con contenuti riconoscibili.",
+      "category": "Design & E-commerce",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/cosplus3d",
+          "label": "Instagram"
+        }
+      ],
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DKxv5vgKjYi/",
+          "embed": "https://www.instagram.com/reel/DKxv5vgKjYi/embed/",
+          "views": 1700000
+        }
+      ]
+    },
+    {
+      "name": "Crybaby.ely",
+      "description": "performer e cosplayer: community da 19.300 follower attivi.",
+      "category": "Artist & Performer",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/elisa.crybaby",
+          "label": "Instagram"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "Out Of Mana",
+      "description": "collettivo di creator: un singolo reel da 7,1 milioni di visualizzazioni organiche.",
+      "category": "Gaming & Creator",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/outofmana_mtg/",
+          "label": "Instagram"
+        }
+      ],
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DF-n12pCGn6/",
+          "embed": "https://www.instagram.com/reel/DF-n12pCGn6/embed/",
+          "views": 7100000
+        }
+      ]
+    },
+    {
+      "name": "Dentisti Marrapese",
+      "description": "profilo aperto da zero, community avviata e attiva in meno di dieci giorni. Oggi su TikTok con video da centinaia di migliaia di visualizzazioni.",
+      "category": "Studio Dentistico",
+      "profiles": [
+        {
+          "url": "https://www.tiktok.com/@dentisti.marrapese",
+          "label": "TikTok"
+        }
+      ],
+      "videos": [
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@dentisti.marrapese/video/7600107392906333462",
+          "embed": "https://www.tiktok.com/player/v1/7600107392906333462",
+          "views": 700000
+        }
+      ]
+    },
+    {
+      "name": "Teatro Destino Libero",
+      "description": "dal profilo vuoto a una platea coinvolta in meno di due settimane.",
+      "category": "Teatro",
+      "profiles": [],
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DQAp6mhiHXc/",
+          "embed": "https://www.instagram.com/reel/DQAp6mhiHXc/embed/",
+          "views": 400000
+        }
+      ]
+    },
+    {
+      "name": "Sorriso Bistrot",
+      "description": "Un bistrot che si racconta ogni giorno: contenuti food e sala che portano le persone al tavolo.",
+      "category": "Ristorazione",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/sorriso.bistrot",
+          "label": "Instagram"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "SP Motors",
+      "description": "Concessionaria a Roma: storytelling di auto e motori, su Instagram e TikTok.",
+      "category": "Automotive",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/sp_motors_roma",
+          "label": "Instagram"
+        },
+        {
+          "url": "https://www.tiktok.com/@sp_motors_",
+          "label": "TikTok"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "La Compagnia Degli Anelli",
+      "description": "La voce è il prodotto: contenuti che fanno sentire — letteralmente — la qualità della scuola.",
+      "category": "Scuola di Doppiaggio",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/scuola.doppiaggio.anelli",
+          "label": "Instagram"
+        },
+        {
+          "url": "https://www.tiktok.com/@scuola.doppiaggio.anelli",
+          "label": "TikTok"
+        }
+      ],
+      "videos": []
+    },
+    {
+      "name": "Luca Monti — Ironman",
+      "description": "La disciplina di un atleta Ironman raccontata giorno per giorno: un personal brand che ispira e aggrega.",
+      "category": "Personal Brand · Atleta",
+      "profiles": [
+        {
+          "url": "https://www.instagram.com/lucamonti_ironman",
+          "label": "Instagram"
+        }
+      ],
+      "videos": []
+    }
+  ]
+}

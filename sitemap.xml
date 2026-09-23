@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://organiq-agency.it/</loc>
+    <loc>https://organiqsocialagency-wq.github.io/SitoOrganiq/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://organiq-agency.it/check-up.html</loc>
+    <loc>https://organiqsocialagency-wq.github.io/SitoOrganiq/check-up.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://organiq-agency.it/portfolio.html</loc>
+    <loc>https://organiqsocialagency-wq.github.io/SitoOrganiq/portfolio.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://organiq-agency.it/contatti.html</loc>
+    <loc>https://organiqsocialagency-wq.github.io/SitoOrganiq/contatti.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url><loc>https://organiqsocialagency-wq.github.io/SitoOrganiq/servizi.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>

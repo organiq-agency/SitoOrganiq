@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /grazie.html
 
-Sitemap: https://organiq-agency.it/sitemap.xml
+Sitemap: https://organiqsocialagency-wq.github.io/SitoOrganiq/sitemap.xml
