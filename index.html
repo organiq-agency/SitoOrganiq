@@ -60,6 +60,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/landing.css?v=5fb6ddc3f4">
 <link rel="stylesheet" href="css/brand-work.css?v=ced9b5dc19">
+<link rel="stylesheet" href="css/navigation.css?v=2fdafb7749">
 </head>
 <body>
 
@@ -75,14 +76,7 @@
       Organiq<span class="accent">.</span>
     </a>
     <nav aria-label="Navigazione principale">
-      <ul class="nav-links">
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="#metodo" data-nav>Metodo</a></li>
-        <li><a href="#risultati" data-nav>Risultati</a></li>
-        <li><a href="#team" data-nav>Team</a></li>
-        <li><a href="#richiedi" data-nav>Contatti</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
+      <ul class="nav-links"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="servizi.html">Servizi</a></li><li class="project-menu"><div class="project-menu-top"><a href="portfolio.html">Progetti</a><button class="project-toggle" aria-label="Apri categorie progetti" aria-expanded="false" aria-controls="project-dropdown">⌄</button></div><ul class="project-dropdown" id="project-dropdown" hidden><li><a href="portfolio.html#social-video">Social e video</a></li><li><a href="portfolio.html#brand-design">Loghi e brandbook</a></li><li><a href="portfolio.html#landing-realizzate">Siti web</a></li></ul></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
     </nav>
     <a href="check-up.html" class="btn btn-primary nav-cta">Scopri quanto puoi crescere</a>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri menu">
@@ -92,21 +86,11 @@
 </header>
 
 <div class="nav-mobile" id="mobileMenu">
-  <ul>
-    <li><a href="servizi.html">Servizi</a></li>
-    <li><a href="#metodo">Metodo</a></li>
-    <li><a href="#risultati">Risultati</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#richiedi">Contatti</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-  </ul>
+  <ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><details class="mobile-projects"><summary>Progetti</summary><a href="portfolio.html">Tutti i progetti</a><a href="portfolio.html#social-video">Social e video</a><a href="portfolio.html#brand-design">Loghi e brandbook</a><a href="portfolio.html#landing-realizzate">Siti web</a></details></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
   <a href="check-up.html" class="btn btn-primary">Scopri quanto puoi crescere</a>
 </div>
 
-<main>
-
-<!-- ============ 1. HERO ============ -->
-<section class="hero" id="hero">
+<main><section class="hero" id="hero">
   <span class="deco deco-squiggle" aria-hidden="true"><svg viewBox="0 0 64 26" fill="none"><path d="M3 13 Q 13 2, 23 13 T 43 13 T 61 13" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
   <span class="deco deco-dots" aria-hidden="true"><svg viewBox="0 0 54 54" fill="currentColor"><circle cx="7" cy="7" r="5"/><circle cx="27" cy="7" r="5"/><circle cx="47" cy="7" r="5"/><circle cx="7" cy="27" r="5"/><circle cx="27" cy="27" r="5"/><circle cx="47" cy="27" r="5"/><circle cx="7" cy="47" r="5"/><circle cx="27" cy="47" r="5"/><circle cx="47" cy="47" r="5"/></svg></span>
   <span class="deco deco-plus" aria-hidden="true"><svg viewBox="0 0 30 30" fill="none"><path d="M15 3v24M3 15h24" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></span>
@@ -134,10 +118,7 @@
     </div>
   </div>
 
-</section>
-
-<!-- ============ 2. TRUST STRIP ============ -->
-<section class="strip" aria-label="Brand con cui abbiamo lavorato">
+</section><section class="strip" aria-label="Brand con cui abbiamo lavorato">
   <p class="strip-title">Abbiamo lavorato <strong>con:</strong></p>
   <div class="mq">
     <div class="mq-track">
@@ -160,139 +141,7 @@
       <div class="mq-item"><img src="assets/logos/pow3r.webp" alt="" width="42" height="42" loading="lazy">Pow3r</div>
     </div>
   </div>
-</section>
-
-<!-- ============ 3. MANIFESTO ============ -->
-<section class="section">
-  <div class="container manifesto">
-    <p data-reveal-text>Ogni giorno migliaia di persone scoprono nuove attività scorrendo un feed. La differenza tra chi cresce e chi resta invisibile non è la fortuna: è avere qualcuno che racconta la tua storia nel modo giusto, alle persone giuste, ogni singolo giorno.</p>
-    <div class="sig" data-reveal>— Il motivo per cui esiste Organiq</div>
-  </div>
-</section>
-
-<!-- ============ 4. STATS ============ -->
-<section class="section" style="padding-top:0">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat" data-reveal><b><span data-count="150" data-prefix="+" data-suffix="%">+150%</span></b><span>fatturato dai canali digitali in 6 mesi</span></div>
-      <div class="stat" data-reveal><b><span data-count="30" data-prefix="+">+30</span></b><span>profili portati al successo</span></div>
-      <div class="stat" data-reveal><b><span data-count="7" data-suffix=",1M">7,1M</span></b><span>visualizzazioni su un singolo reel</span></div>
-      <div class="stat" data-reveal><b><span data-count="10" data-suffix="+">10+</span></b><span>anni nel mondo social</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5. PAIN POINT ============ -->
-<section class="section band--soft" id="ti-riconosci">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow" data-reveal>Se ti suona familiare</span>
-      <h2 data-reveal>Pubblichi, pubblichi, e <span class="accent-grad">non cambia niente?</span></h2>
-      <p class="lead" data-reveal>La maggior parte delle attività non ha un problema di social. Ha un problema di metodo. Vedi se ti ritrovi:</p>
-    </div>
-    <ul class="painlist">
-      <li data-reveal><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg> Pubblichi quando ti ricordi, senza un piano — e i numeri restano fermi.</li>
-      <li data-reveal><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg> I tuoi profili sembrano abbandonati, o non esistono, mentre concorrenti meno bravi di te si prendono i clienti.</li>
-      <li data-reveal><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg> Ci hai provato da solo, ma tra lavoro e clienti non hai tempo, testa né voglia di stare dietro all'algoritmo.</li>
-      <li data-reveal><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg> Hai pagato inserzioni che funzionavano solo finché pagavi: budget finito, contatti spariti.</li>
-      <li data-reveal><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg> Sei bravissimo in quello che fai. Online, però, non si vede.</li>
-    </ul>
-    <div class="solution" data-reveal>
-      <h3>Se ti ritrovi anche in una sola di queste, il problema non sei tu. <span class="accent">È il metodo.</span></h3>
-      <p>Nessuno ti ha ancora costruito una presenza pensata per il tuo business: contenuti scritti da persone che parlano la lingua dei social, girati dal vivo insieme a te, e una crescita organica che ti fa ricordare — non solo vedere. È esattamente quello che facciamo noi.</p>
-      <a href="check-up.html" class="btn btn-primary btn-lg">
-        Scopri quanto può crescere la tua attività
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 6. JOURNEY — 3 PASSAGGI ============ -->
-<section class="section journey" id="passaggi">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow" data-reveal>Prima di tutto</span>
-      <h2 data-reveal>I 3 passaggi per <span class="accent-grad">trasformare i tuoi social.</span></h2>
-      <p class="lead" data-reveal>Prima di pubblicare qualsiasi cosa, servono tre consapevolezze. È da qui che parte ogni risultato vero.</p>
-    </div>
-
-    <div class="jstep jstep-1" data-reveal>
-      <div class="jstep-visual">
-        <span class="grad-orb" aria-hidden="true"></span>
-        <div class="jfig jfig-ring" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <circle class="ring-track" cx="100" cy="100" r="78"/>
-            <circle class="ring-dash" cx="100" cy="100" r="78"/>
-            <text class="qmark" x="100" y="100" text-anchor="middle" dominant-baseline="central">?</text>
-          </svg>
-        </div>
-      </div>
-      <div class="jstep-body">
-        <span class="jstep-num">Passo 01</span>
-        <h3>La tua attività ha <span class="accent">DAVVERO</span> bisogno dei social?</h3>
-        <p>I social non aggiustano un business: lo amplificano. Se l'offerta funziona, la moltiplicano; se qualcosa si inceppa — prezzi, servizio, margini — lo mostrano a tutti. Troppo spesso si dà la colpa a Instagram quando i conti non tornano. Il primo passo non è pubblicare: è capire, con onestà, se i social sono la leva giusta per te adesso.</p>
-        <a href="#richiedi" class="btn btn-primary">
-          Richiedi un'analisi della tua attività
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="jstep jstep-2" data-reveal>
-      <div class="jstep-visual">
-        <span class="grad-orb" aria-hidden="true"></span>
-        <div class="jfig jfig-orbit" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <circle class="orbit" cx="100" cy="100" r="42"/>
-            <circle class="orbit" cx="100" cy="100" r="64"/>
-            <circle class="orbit" cx="100" cy="100" r="86"/>
-            <circle class="core" cx="100" cy="100" r="15"/>
-            <g class="spin s1"><circle class="dot1" cx="100" cy="58" r="7"/></g>
-            <g class="spin s2"><circle class="dot2" cx="100" cy="36" r="6"/></g>
-            <g class="spin s3"><circle class="dot3" cx="100" cy="14" r="8"/></g>
-          </svg>
-        </div>
-      </div>
-      <div class="jstep-body">
-        <span class="jstep-num">Passo 02</span>
-        <h3>Scopri quanto potenziale ha la tua attività sui social</h3>
-        <p>La maggior parte delle persone non pubblica per paura: paura del giudizio, di non essere all'altezza, della classica sindrome dell'impostore. Eppure ogni volta che un nostro cliente ha superato quel blocco e ha iniziato a metterci la faccia davanti alla telecamera — con la nostra guida — i risultati si sono moltiplicati. Il tuo potenziale non è nei follower che non hai: è nella storia che ancora non stai raccontando.</p>
-        <a href="check-up.html" class="btn btn-primary">
-          Scopri quanto può crescere la tua attività
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="jstep jstep-3" data-reveal>
-      <div class="jstep-visual">
-        <span class="grad-orb" aria-hidden="true"></span>
-        <div class="jfig jfig-bars" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <rect x="26" y="120" width="26" height="60" rx="6"/>
-            <rect x="66" y="90" width="26" height="90" rx="6"/>
-            <rect x="106" y="60" width="26" height="120" rx="6"/>
-            <rect x="146" y="30" width="26" height="150" rx="6"/>
-            <path class="arrow" d="M30 140 L75 108 L118 78 L165 40 M148 40 h18 v18"/>
-          </svg>
-        </div>
-      </div>
-      <div class="jstep-body">
-        <span class="jstep-num">Passo 03</span>
-        <h3>Scopri quello che ti serve per non buttare tempo, soldi e credibilità online</h3>
-        <p>Ogni giorno online senza una direzione è tempo, budget e reputazione che se ne vanno. Un profilo curato male comunica più di uno assente: dice "non ci tengo". In una call gratuita mettiamo a fuoco cosa ti serve davvero — e cosa no — così ogni euro e ogni ora vanno esattamente dove contano.</p>
-        <a href="#richiedi" class="btn btn-primary">
-          Prenota una call gratuita
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. SERVIZI (banda chiara) ============ -->
-<section class="section band--light" id="servizi">
+</section><section class="section band--light" id="servizi">
   <div class="container">
     <div class="head-split">
       <span class="eyebrow" data-reveal>Cosa facciamo</span>
@@ -343,231 +192,7 @@
     </div>
     <p style="margin-top:32px"><a class="btn btn-primary" href="servizi.html">Esplora i servizi e i prezzi ↗</a></p>
   </div>
-</section>
-
-<section class="section brand-work" id="brand-design"><div class="container"><div class="section-head"><span class="eyebrow">Brand identity · Lavori selezionati</span><h2>Un’identità che si riconosce.<br><span class="accent-grad">Su ogni superficie.</span></h2><p class="lead">Dal ridisegno del logo alle regole del brand: ecco alcuni progetti realizzati da Organiq.</p></div><div class="brand-comparisons"><figure class="brand-comparison"><div class="brand-pair brand-pair--motori"><div><span>Prima · SP Motors</span><img src="assets/loghi/sp-motors-prima.jpg" alt="Vecchio logo SP Motors con auto rossa" loading="lazy" width="1125" height="1125"></div><div><span>Dopo · LT Motori</span><img src="assets/loghi/lt-motori-dopo.png" alt="Nuovo logo LT Motori con monogramma rosso e bianco" loading="lazy" width="1254" height="1254"></div></div><figcaption><strong>SP Motors → LT Motori</strong><span>Rebranding · Automotive</span></figcaption></figure><figure class="brand-comparison"><div class="brand-pair"><div><span>Prima</span><img src="assets/loghi/destino-libero-prima.webp" alt="Destino Libero: logo prima il restyling" loading="lazy" width="400" height="300"></div><div><span>Dopo</span><img src="assets/loghi/destino-libero-dopo.webp" alt="Destino Libero: logo dopo il restyling" loading="lazy" width="400" height="300"></div></div><figcaption><strong>Destino Libero</strong><span>Brand identity</span></figcaption></figure><figure class="brand-comparison"><div class="brand-pair"><div><span>Prima</span><img src="assets/loghi/element-sud-prima.webp" alt="Element Sud: logo prima il restyling" loading="lazy" width="400" height="300"></div><div><span>Dopo</span><img src="assets/loghi/element-sud-dopo.webp" alt="Element Sud: logo dopo il restyling" loading="lazy" width="400" height="300"></div></div><figcaption><strong>Element Sud</strong><span>Trading card store</span></figcaption></figure><figure class="brand-comparison"><div class="brand-pair"><div><span>Prima</span><img src="assets/loghi/printyourdreams-prima.webp" alt="Printyourdreams: logo prima il restyling" loading="lazy" width="400" height="300"></div><div><span>Dopo</span><img src="assets/loghi/printyourdreams-dopo.webp" alt="Printyourdreams: logo dopo il restyling" loading="lazy" width="400" height="300"></div></div><figcaption><strong>Printyourdreams</strong><span>Stampa 3D</span></figcaption></figure></div><div class="brand-case-head"><div><span class="eyebrow">Caso studio · LT Motori</span><h3>Il logo è solo l’inizio.</h3><p>Un sistema coordinato per materiali aziendali, sito e social. Esplora le applicazioni e il manuale completo.</p></div><a class="btn btn-primary" href="assets/lt-motori/brandbook-lt-motori.pdf" target="_blank" rel="noopener">Sfoglia il brandbook ↗</a></div><div class="brand-pages"><a href="assets/lt-motori/brandbook-lt-motori.pdf#page=9" target="_blank" rel="noopener"><figure><img src="assets/lt-motori/corporate.jpg" alt="LT Motori: Corporate identity" width="1400" height="990" loading="lazy"><figcaption>Corporate identity ↗</figcaption></figure></a><a href="assets/lt-motori/brandbook-lt-motori.pdf#page=3" target="_blank" rel="noopener"><figure><img src="assets/lt-motori/logo.jpg" alt="LT Motori: Logo e varianti" width="1400" height="990" loading="lazy"><figcaption>Logo e varianti ↗</figcaption></figure></a><a href="assets/lt-motori/brandbook-lt-motori.pdf#page=10" target="_blank" rel="noopener"><figure><img src="assets/lt-motori/digital.jpg" alt="LT Motori: Digital e social" width="1400" height="990" loading="lazy"><figcaption>Digital e social ↗</figcaption></figure></a></div><p class="brand-footnote">LT Motori · Brandbook V1 · PDF, 14 pagine.</p></div></section>
-<!-- ============ 8. METODO ============ -->
-<section class="section" id="metodo">
-  <div class="container">
-    <div class="head-split">
-      <span class="eyebrow" data-reveal>Il Metodo Organiq</span>
-      <h2 data-reveal>Quattro passaggi che trasformano un profilo in un canale di clienti.</h2>
-      <p class="lead" data-reveal>Nessuna improvvisazione: un percorso chiaro, dallo studio dei dati alla crescita misurabile.</p>
-    </div>
-
-    <div class="step-row" data-reveal>
-      <div class="step-num">01</div>
-      <div class="step-body">
-        <h3>Analisi — capiamo dove sei</h3>
-        <p>Studiamo il tuo mercato, i tuoi competitor e i tuoi canali attuali. Prima i dati, poi le idee: nessuna strategia fotocopia, perché la tua attività non è la fotocopia di nessuna.</p>
-        <div class="chips"><span class="chip">Analisi competitor</span><span class="chip">Audit dei profili</span><span class="chip">Obiettivi di business</span></div>
-      </div>
-    </div>
-    <div class="step-row" data-reveal>
-      <div class="step-num">02</div>
-      <div class="step-body">
-        <h3>Strategia — decidiamo dove andare</h3>
-        <p>Posizionamento, piattaforme giuste e piano editoriale su misura. Ogni contenuto ha un compito preciso: farti trovare, farti ricordare, farti scegliere.</p>
-        <div class="chips"><span class="chip">Posizionamento</span><span class="chip">Piano editoriale</span><span class="chip">Tone of voice</span></div>
-      </div>
-    </div>
-    <div class="step-row" data-reveal>
-      <div class="step-num">03</div>
-      <div class="step-body">
-        <h3>Creazione — giriamo dal vivo, con te</h3>
-        <p>Non ti mandiamo istruzioni: veniamo noi, con una macchina e un'idea. Foto, video e reels scritti da persone e girati faccia a faccia — il contatto umano si vede, anche dietro uno schermo.</p>
-        <div class="chips"><span class="chip">Shooting dal vivo</span><span class="chip">Reels &amp; formati brevi</span><span class="chip">Copy scritti da persone</span></div>
-      </div>
-    </div>
-    <div class="step-row" data-reveal>
-      <div class="step-num">04</div>
-      <div class="step-body">
-        <h3>Crescita — misuriamo e miglioriamo</h3>
-        <p>Zero pubblico comprato, zero scorciatoie: solo crescita organica che resta. Ogni mese un report chiaro con dati pubblici e verificabili. I numeri non mentono.</p>
-        <div class="chips"><span class="chip">Report mensile</span><span class="chip">Dati verificabili</span><span class="chip">100% organico</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 9. RISULTATI (banda chiara) ============ -->
-<section class="section band--light" id="risultati">
-  <div class="container">
-    <div class="head-split">
-      <span class="eyebrow" data-reveal>I nostri risultati</span>
-      <h2 data-reveal>Casi reali, numeri verificabili.</h2>
-      <p class="lead" data-reveal>Follower e visualizzazioni sono dati pubblici: puoi controllarli direttamente sui profili. La fiducia si costruisce con le prove, non con le promesse.</p>
-    </div>
-    <div class="grid g4">
-      <div class="card" data-reveal data-tilt>
-        <span class="case-tag">Formazione</span>
-        <div class="case-metric">2,9M<small> views</small></div>
-        <p class="case-desc"><strong>Leone Master School</strong> — 2,9 milioni di visualizzazioni negli ultimi 30 giorni.</p>
-      </div>
-      <div class="card" data-reveal data-tilt>
-        <span class="case-tag">Personal Brand</span>
-        <div class="case-metric">162K<small> follower</small></div>
-        <p class="case-desc"><strong>Leonardo Leone</strong> — un imprenditore trasformato in canale di autorevolezza e acquisizione.</p>
-      </div>
-      <div class="card" data-reveal data-tilt>
-        <span class="case-tag">Design &amp; E-commerce</span>
-        <div class="case-metric">42K<small> follower</small></div>
-        <p class="case-desc"><strong>Cosplus3D</strong> — 42.000 follower costruiti con contenuti riconoscibili.</p>
-      </div>
-      <div class="card" data-reveal data-tilt>
-        <span class="case-tag">Intrattenimento</span>
-        <div class="case-metric">7,1M<small> views</small></div>
-        <p class="case-desc"><strong>Out Of Mana</strong> — un singolo reel da 7,1 milioni di visualizzazioni organiche.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:44px" data-reveal>
-      <a href="portfolio.html" class="btn btn-ghost">
-        Vedi tutto il portfolio
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 10. RECENSIONI ============ -->
-<section class="section" id="recensioni">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow" data-reveal>Dicono di noi</span>
-      <h2 data-reveal>Le parole di chi ci ha <span class="accent-grad">dato fiducia.</span></h2>
-    </div>
-  </div>
-  <div class="reviews-wrap" data-reveal>
-    <div class="rv-track" id="rvTrack1">
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="5"></span><span class="rv-score">5,0</span></div>
-        <h4>"Finalmente qualcuno che non promette, dimostra."</h4>
-        <p>Prima pubblicavo a caso e non cambiava niente. In tre mesi il profilo è diventato il mio primo canale di prenotazioni.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--mint)">MC</span><div><b>Martina C.</b><span>Titolare di un bistrot</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="4.7"></span><span class="rv-score">4,7</span></div>
-        <h4>"Vengono loro da te, e si vede la differenza."</h4>
-        <p>Lo shooting dal vivo cambia tutto: i video sembrano veri perché lo sono. I clienti me li citano in negozio.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--purple);color:#fff">FR</span><div><b>Federico R.</b><span>Concessionaria auto</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="5"></span><span class="rv-score">5,0</span></div>
-        <h4>"Il report mensile è la cosa che mi ha conquistato."</h4>
-        <p>Numeri chiari, verificabili, senza fumo. Capisco esattamente cosa sta funzionando e perché.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--lemon)">GP</span><div><b>Giulia P.</b><span>Commercialista</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="4.7"></span><span class="rv-score">4,7</span></div>
-        <h4>"Hanno capito il mio settore meglio di me."</h4>
-        <p>Pensavo che i social non facessero per la mia attività. Mi hanno fatto ricredere con i fatti, non con le parole.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--coral);color:#fff">AL</span><div><b>Andrea L.</b><span>Artigiano</span></div></div>
-      </div>
-    </div>
-    <div class="rv-track rev" id="rvTrack2">
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="5"></span><span class="rv-score">5,0</span></div>
-        <h4>"Zero pubblico comprato. Crescita vera."</h4>
-        <p>Con altre agenzie i follower salivano e le vendite no. Qui è il contrario: la community è piccola ma compra.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--mint)">SM</span><div><b>Serena M.</b><span>E-commerce artigianale</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="4.7"></span><span class="rv-score">4,7</span></div>
-        <h4>"Professionisti veri, con un metodo vero."</h4>
-        <p>Piano editoriale, riprese, pubblicazione, report: non devo pensare a niente. Io lavoro, loro raccontano.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--purple);color:#fff">DT</span><div><b>Davide T.</b><span>Palestra e personal training</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="5"></span><span class="rv-score">5,0</span></div>
-        <h4>"Mi hanno detto anche cosa NON fare."</h4>
-        <p>Al primo incontro mi hanno sconsigliato di investire su una piattaforma che non mi serviva. Lì ho capito che erano onesti.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--lemon)">EC</span><div><b>Elena C.</b><span>Centro estetico</span></div></div>
-      </div>
-      <div class="review">
-        <div class="rv-head"><span class="stars" data-stars="5"></span><span class="rv-score">5,0</span></div>
-        <h4>"Il contenuto giusto vale più di cento post."</h4>
-        <p>Un solo reel girato con loro ha portato più richieste di un anno di post fatti da me. Non è magia, è mestiere.</p>
-        <div class="rv-who"><span class="rv-avatar" style="background:var(--coral);color:#fff">LB</span><div><b>Luca B.</b><span>Ristoratore</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 11. PRIMA / DOPO (banda mint) ============ -->
-<section class="section band--mint">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow" data-reveal>La differenza</span>
-      <h2 data-reveal>Prima e dopo <span class="accent-grad">Organiq.</span></h2>
-    </div>
-    <div class="compare">
-      <div class="cmp before" data-reveal>
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg> Prima</h3>
-        <ul>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Pubblichi quando capita, senza piano né direzione</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Contenuti improvvisati che non ti somigliano</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Follower fermi e nessun cliente dai social</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Nessun dato: navighi a vista</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg> Ore rubate al tuo lavoro per stare dietro all'algoritmo</li>
-        </ul>
-      </div>
-      <div class="cmp after" data-reveal>
-        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg> Con Organiq</h3>
-        <ul>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Piano editoriale costante, pensato per il tuo business</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Contenuti professionali scritti da persone e girati dal vivo</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Una community organica che ti ricorda e ti sceglie</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Report mensile con dati pubblici e verificabili</li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Il tuo tempo torna al tuo lavoro: al racconto pensiamo noi</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 12. TEAM (spostato in basso) ============ -->
-<section class="section" id="team">
-  <div class="container">
-    <div class="head-split">
-      <span class="eyebrow" data-reveal>Chi c'è dietro Organiq</span>
-      <h2 data-reveal>Due teste, un metodo.</h2>
-      <p class="lead" data-reveal>Dietro ogni contenuto ci sono due persone vere: la strategia che decide dove andare e l'occhio creativo che lo trasforma in immagini.</p>
-    </div>
-    <div class="team-people">
-      <article class="person" data-reveal>
-        <figure class="person-photo">
-          <img src="assets/team/riccardo.webp" alt="Riccardo Romanazzo, social media strategist e co-fondatore di Organiq" width="1024" height="1536" loading="lazy">
-          <figcaption><span>La Strategia</span><b>Riccardo Romanazzo</b></figcaption>
-        </figure>
-        <div class="person-body">
-          <p class="team-quote">"Ogni attività ha qualcosa di unico. Il mio lavoro è trovarlo e farlo diventare il motivo per cui i clienti scelgono te."</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Social Media Manager di 20+ attività</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> CMO di 2 startup</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Nel mondo social da 10+ anni, verticale sul marketing organico</li>
-          </ul>
-        </div>
-      </article>
-      <article class="person" data-reveal>
-        <figure class="person-photo">
-          <img src="assets/team/giacomo.webp" alt="Giacomo Dotti, videomaker e co-fondatore di Organiq" width="720" height="977" loading="lazy">
-          <figcaption><span>L'Occhio Creativo</span><b>Giacomo Dotti</b></figcaption>
-        </figure>
-        <div class="person-body">
-          <p class="team-quote">"Credo che ogni storia meriti di essere raccontata nel modo più professionale possibile, attraverso immagini che emozionano."</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Videomaker con formazione in Cinema e Distribuzione</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Collaborazioni con creator: Giovanni Fois, Maurizio Merluzzo, Pow3r</li>
-            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Esperienza con reti televisive: Sky, Mediaset, Rai</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 13. FORM RICHIESTA (banda soft) ============ -->
-<section class="section band--soft" id="richiedi">
+</section><section class="section" id="risultati"><div class="container"><span class="eyebrow">Progetti selezionati</span><h2>Il nostro lavoro, da vicino.</h2><p class="lead">Social, identità visive e siti: esplora ciò che realizziamo per i nostri clienti.</p><div class="project-entry-grid"><a class="project-entry" href="portfolio.html#social-video"><span class="eyebrow">Social e video</span><h3>Contenuti che si fanno guardare.</h3><p>Reel, clienti e risultati: da Leonardo Leone a Cosplus3D.</p><span>Guarda i video ↗</span></a><a class="project-entry" href="portfolio.html#brand-design"><span class="eyebrow">Loghi e brandbook</span><h3>Da SP Motors a LT Motori.</h3><img src="assets/loghi/lt-motori-dopo.png" alt="Nuova identità LT Motori" width="1254" height="1254" loading="lazy"><span>Esplora le identità ↗</span></a><a class="project-entry" href="portfolio.html#landing-realizzate"><span class="eyebrow">Siti web</span><h3>Identità che diventano esperienze.</h3><p>Compagnia degli Anelli, Elisa Carosi e Sorriso Bistrot.</p><span>Esplora i siti ↗</span></a></div></div></section><section class="section" id="metodo"><div class="container"><span class="eyebrow">Il nostro metodo</span><h2>Ascoltiamo. Progettiamo.<br>Creiamo. Misuriamo.</h2><p class="lead">Dall’analisi iniziale alla produzione dei contenuti, ogni passaggio parte dagli obiettivi della tua attività.</p><a class="btn btn-ghost" href="chi-siamo.html#metodo">Scopri come lavoriamo ↗</a></div></section><section class="section" id="team"><div class="container"><span class="eyebrow">Chi siamo</span><h2>Due teste, un metodo.</h2><p class="lead">Riccardo Romanazzo, strategia e social. Giacomo Dotti, video e produzione. Lavoriamo con te, dal primo confronto ai contenuti online.</p><a class="btn btn-ghost" href="chi-siamo.html">Conosci il team ↗</a></div></section><section class="section band--soft" id="richiedi">
   <div class="container">
     <div class="register" data-reveal>
       <span class="eyebrow">Richiesta analisi</span>
@@ -606,10 +231,7 @@
       </form>
     </div>
   </div>
-</section>
-
-<!-- ============ 14. FAQ ============ -->
-<section class="section" id="faq">
+</section><section class="section" id="faq">
   <div class="container">
     <div class="section-head center">
       <span class="eyebrow" data-reveal>Domande frequenti</span>
@@ -650,10 +272,7 @@
       </details>
     </div>
   </div>
-</section>
-
-<!-- ============ 15. CTA FINALE ============ -->
-<section class="finalcta">
+</section><section class="finalcta">
   <div class="container">
     <img class="mark" src="assets/mark-mint-sq.png" alt="" width="110" height="110" aria-hidden="true">
     <h2 data-split>La tua attività ha più potenziale di quanto pensi.</h2>
@@ -665,9 +284,7 @@
       </a>
     </div>
   </div>
-</section>
-
-</main>
+</section></main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
@@ -682,12 +299,7 @@
       </div>
       <div>
         <h4>Naviga</h4>
-        <ul>
-          <li><a href="servizi.html">Servizi</a></li>
-          <li><a href="#risultati">Risultati</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="check-up.html">Scopri quanto puoi crescere</a></li>
-        </ul>
+        <ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><a href="portfolio.html">Progetti</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
       </div>
       <div>
         <h4>Contatti</h4>
@@ -711,5 +323,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js" defer></script>
 <script src="js/landing.js?v=e075976cc0" defer></script>
+<script src="js/navigation.js?v=d1e3357e41" defer></script>
 </body>
 </html>

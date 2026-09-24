@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=32ef538737">
+<link rel="stylesheet" href="css/navigation.css?v=2fdafb7749">
 </head>
 <body>
 
@@ -30,13 +31,7 @@
       Organiq<span class="accent">.</span>
     </a>
     <nav aria-label="Navigazione principale">
-      <ul class="nav-links">
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="index.html#metodo">Metodo</a></li>
-        <li><a href="index.html#team">Team</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contatti.html" aria-current="page">Contatti</a></li>
-      </ul>
+      <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="servizi.html">Servizi</a></li><li class="project-menu"><div class="project-menu-top"><a href="portfolio.html">Progetti</a><button class="project-toggle" aria-label="Apri categorie progetti" aria-expanded="false" aria-controls="project-dropdown">⌄</button></div><ul class="project-dropdown" id="project-dropdown" hidden><li><a href="portfolio.html#social-video">Social e video</a></li><li><a href="portfolio.html#brand-design">Loghi e brandbook</a></li><li><a href="portfolio.html#landing-realizzate">Siti web</a></li></ul></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li></ul>
     </nav>
     <a href="check-up.html" class="btn btn-primary nav-cta">Scopri quanto puoi crescere</a>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri menu">
@@ -46,13 +41,7 @@
 </header>
 
 <div class="nav-mobile" id="mobileMenu">
-  <ul>
-    <li><a href="servizi.html">Servizi</a></li>
-    <li><a href="index.html#metodo">Metodo</a></li>
-    <li><a href="index.html#team">Team</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
+  <ul><li><a href="index.html">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><details class="mobile-projects"><summary>Progetti</summary><a href="portfolio.html">Tutti i progetti</a><a href="portfolio.html#social-video">Social e video</a><a href="portfolio.html#brand-design">Loghi e brandbook</a><a href="portfolio.html#landing-realizzate">Siti web</a></details></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li></ul>
   <a href="check-up.html" class="btn btn-primary">Scopri quanto puoi crescere</a>
 </div>
 
@@ -150,12 +139,7 @@
       </div>
       <div>
         <h4>Naviga</h4>
-        <ul>
-          <li><a href="servizi.html">Servizi</a></li>
-          <li><a href="index.html#risultati">Risultati</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="check-up.html">Test del Potenziale</a></li>
-        </ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><a href="portfolio.html">Progetti</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html" aria-current="page">Contatti</a></li></ul>
       </div>
       <div>
         <h4>Contatti</h4>
@@ -174,5 +158,6 @@
 </footer>
 
 <script src="js/main.js?v=72a874232b"></script>
+<script src="js/navigation.js?v=d1e3357e41" defer></script>
 </body>
 </html>
