@@ -164,23 +164,63 @@
     var intro = $('#intro');
     if (intro) intro.classList.add('is-done');
     if (lenis) lenis.start();
+    var hv = $('.hero-bg video');
+    if (hv) { try { hv.currentTime = 0; var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {}); } catch (e) {} }
     heroIn();
     if (hasST) ScrollTrigger.refresh();
+  }
+
+  /* Preloader: il logo Organiq si costruisce (anello, ali, becco, scritta) mentre carica il video */
+  function heroReady() {
+    return new Promise(function (resolve) {
+      var t0 = performance.now();
+      (function check() {
+        var bg = $('.hero-bg');
+        if ((bg && bg.classList.contains('is-loaded')) || performance.now() - t0 > 4200) resolve();
+        else setTimeout(check, 100);
+      })();
+    });
   }
   function runIntro() {
     var intro = $('#intro');
     if (!intro || !root.classList.contains('intro-on') || !hasG || reduce) { finishIntro(); return; }
-    try { sessionStorage.setItem('oq-intro', '1'); } catch (e) {}
     if (lenis) lenis.stop();
-    var lines = $$('.intro-list span', intro);
-    var tl = gsap.timeline({ onComplete: finishIntro });
-    tl.from('.intro-logo', { y: 16, opacity: 0, duration: .7, ease: 'power3.out' })
-      .to('.intro-line', { scaleX: 1, duration: 1, ease: 'power3.inOut' }, '-=.25')
-      .add(function () {
-        lines.forEach(function (l, i) { setTimeout(function () { l.style.opacity = 1; scramble(l, 650); }, i * 150); });
-      }, '-=.45')
-      .to({}, { duration: 1.25 })
-      .to(intro, { yPercent: -100, duration: 1, ease: 'power4.inOut' });
+    var ring = $('.im-ring', intro), pct = $('.intro-pct', intro);
+    var C = 2 * Math.PI * 124.4;
+    var prog = { v: 0 };
+    var setPct = function () { pct.textContent = Math.round(prog.v); };
+    gsap.set(ring, { strokeDasharray: C, strokeDashoffset: C, strokeWidth: 5 });
+    gsap.set('.im-wing-l', { scale: 0, rotation: 40, transformOrigin: '95% 10%' });
+    gsap.set('.im-wing-r', { scale: 0, rotation: -40, transformOrigin: '5% 10%' });
+    gsap.set('.im-beak', { y: -70, opacity: 0, transformOrigin: '50% 50%' });
+    gsap.set('.intro-word span', { yPercent: 115 });
+    var ready = heroReady();
+
+    var build = gsap.timeline();
+    build.to(ring, { strokeDashoffset: 0, duration: .95, ease: 'power2.inOut' })
+      .to(ring, { strokeWidth: 42, duration: .5, ease: 'power3.out' }, '-=.12')
+      .to('.im-wing', { scale: 1, rotation: 0, duration: .7, ease: 'back.out(2.2)', stagger: .07 }, '-=.28')
+      .to('.im-beak', { y: 0, opacity: 1, duration: .75, ease: 'bounce.out' }, '-=.45')
+      .to('.intro-word span', { yPercent: 0, duration: .8, ease: 'power4.out', stagger: .04 }, '-=.55')
+      .to(prog, { v: 88, duration: 2.4, ease: 'power1.out', onUpdate: setPct }, 0)
+      .to('.intro-bar', { scaleX: .88, duration: 2.4, ease: 'power1.out' }, 0);
+
+    var breathe = null;
+    Promise.all([ready, new Promise(function (r) {
+      build.eventCallback('onComplete', function () {
+        // se il video non è ancora pronto, il logo "respira" in attesa
+        breathe = gsap.to('.intro-mark', { scale: 1.05, duration: .9, ease: 'sine.inOut', yoyo: true, repeat: -1, transformOrigin: '50% 50%' });
+        r();
+      });
+    })]).then(function () {
+      if (breathe) { breathe.kill(); gsap.to('.intro-mark', { scale: 1, duration: .25 }); }
+      gsap.timeline({ onComplete: finishIntro })
+        .to(prog, { v: 100, duration: .35, ease: 'none', onUpdate: setPct })
+        .to('.intro-bar', { scaleX: 1, duration: .35, ease: 'none' }, '<')
+        .to('.intro-center', { scale: .92, opacity: 0, duration: .55, ease: 'power3.in' }, '+=.1')
+        .to('.intro-foot', { opacity: 0, duration: .3 }, '<')
+        .to(intro, { yPercent: -100, duration: 1, ease: 'power4.inOut' }, '-=.15');
+    });
   }
 
   /* ---------- Reveal generici ---------- */

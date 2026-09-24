@@ -584,3 +584,37 @@ body.show-no-ph .media::after{display:none}
   .hero-overlay{background:linear-gradient(180deg,rgba(5,5,6,.45) 0%,rgba(5,5,6,.15) 22%,rgba(5,5,6,.55) 48%,rgba(5,5,6,.9) 72%,rgba(5,5,6,.96) 100%)}
   .hero-bg .media-el{object-position:50% 30%}
 }
+
+/* ============================================================
+   v3 — preloader, headline e card più grandi
+   ============================================================ */
+.intro{align-items:center;justify-content:center;background:#050506}
+.intro-center{display:flex;flex-direction:column;align-items:center;gap:22px}
+.intro-mark{width:clamp(110px,12vw,148px);height:auto;overflow:visible}
+.im-ring{fill:none;stroke:#16f0a0;stroke-width:42}
+.im-wing,.im-beak{fill:#16f0a0}
+.intro-mark{filter:drop-shadow(0 0 28px rgba(22,240,160,.22))}
+.intro-word{display:flex;overflow:hidden;font-family:var(--f-display);font-weight:500;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.02em;line-height:1.1;padding-bottom:.08em}
+.intro-word span{display:inline-block}
+.intro-word .iw-dot{color:#16f0a0}
+.intro-foot{position:absolute;left:0;right:0;bottom:28px;display:flex;justify-content:space-between;color:var(--grey)}
+.intro-pct{display:inline-block;min-width:3ch;text-align:right;color:var(--txt);font-variant-numeric:tabular-nums}
+.intro-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:#16f0a0;transform-origin:left;transform:scaleX(0);box-shadow:0 0 16px rgba(22,240,160,.6)}
+
+/* Headline hero più grande */
+.display{font-size:clamp(3rem,5.9vw,5.4rem)}
+
+/* Card check-up leggermente più grande */
+.hero-card{min-width:356px;gap:16px;padding:9px 16px 9px 9px}
+.hero-card-media{width:104px}
+.hero-card-body strong{font-size:17.5px}
+.hero-card-body .mono{font-size:11.5px}
+.hero-card .btn--xs{--h:35px;font-size:13.5px;padding:0 12px}
+
+@media (max-width:640px){
+  .display{font-size:clamp(2.75rem,12.4vw,3.6rem)}
+  .hero-card{min-width:0;gap:12px}
+  .hero-card-media{width:84px}
+  .hero-card-body{min-width:0}
+  .hero-card .btn--xs{font-size:12.5px;padding:0 10px}
+}
