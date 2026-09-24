@@ -44,7 +44,8 @@
       v.preload = 'auto';
       v.addEventListener('loadeddata', function () { mount(v); var p = v.play(); if (p && p.catch) p.catch(function () {}); }, { once: true });
       v.addEventListener('error', tryImage, { once: true });
-      v.src = vid;
+      var mob = el.getAttribute('data-video-mobile');
+      v.src = (mob && window.innerWidth < 900) ? mob : vid;
     } else {
       tryImage();
     }
@@ -90,7 +91,8 @@
   /* ---------- Lenis smooth scroll ---------- */
   var lenis = null;
   if (typeof window.Lenis !== 'undefined' && !reduce) {
-    lenis = new Lenis({ duration: 1.1, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+    // scroll volutamente "pesante": interpolazione lenta = movimento fluido e morbido
+    lenis = new Lenis({ lerp: 0.06, wheelMultiplier: 0.9, touchMultiplier: 1.4, smoothWheel: true });
     if (hasST) {
       lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
@@ -150,8 +152,8 @@
   if (hasG && !reduce) gsap.set(heroLines, { yPercent: 110 });
 
   function heroIn() {
-    if (!hasG || reduce) return;
-    var tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+    if (!hasG || reduce) { initDistort(); return; }
+    var tl = gsap.timeline({ defaults: { ease: 'power4.out' }, onComplete: initDistort });
     tl.to(heroLines, { yPercent: 0, duration: 1.2, stagger: .09 })
       .to('[data-hero]', { opacity: 1, y: 0, duration: 1, stagger: .07, ease: 'power3.out' }, .15);
   }
@@ -329,6 +331,175 @@
       animateQa(d, willOpen);
     });
   });
+
+
+  /* ---------- Clienti: una casella alla volta si illumina, in loop ---------- */
+  (function () {
+    var cells = $$('.logo-grid li');
+    if (!cells.length || reduce) return;
+    var i = -1, timer = null;
+    function step() {
+      cells.forEach(function (c) { c.classList.remove('is-lit'); });
+      i = (i + 1) % cells.length;
+      cells[i].classList.add('is-lit');
+    }
+    function start() { if (!timer) { step(); timer = setInterval(step, 1000); } }
+    function stop() { clearInterval(timer); timer = null; }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { en[0].isIntersecting ? start() : stop(); }, { threshold: .2 }).observe($('.logo-grid'));
+    } else start();
+  })();
+
+  /* ---------- Cursore personalizzato ---------- */
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  (function () {
+    var cur = $('#cursor');
+    if (!cur || !fine) { if (cur) cur.remove(); return; }
+    root.classList.add('has-cursor');
+    var ring = $('.cursor-ring', cur), dot = $('.cursor-dot', cur), label = $('.cursor-label', cur);
+    var mx = -100, my = -100, rx = -100, ry = -100, shown = false;
+    window.addEventListener('mousemove', function (e) {
+      mx = e.clientX; my = e.clientY;
+      if (!shown) { shown = true; rx = mx; ry = my; cur.classList.add('is-on'); }
+    }, { passive: true });
+    document.addEventListener('mouseleave', function () { cur.classList.remove('is-on'); shown = false; });
+    document.addEventListener('mousedown', function () { cur.classList.add('is-down'); });
+    document.addEventListener('mouseup', function () { cur.classList.remove('is-down'); });
+    document.addEventListener('mouseover', function (e) {
+      var t = e.target.closest ? e.target.closest('[data-cursor], a, button, summary, #h1Wrap') : null;
+      cur.classList.remove('is-hover', 'is-label', 'is-lens');
+      label.textContent = '';
+      if (!t) return;
+      if (t.id === 'h1Wrap') cur.classList.add('is-lens');
+      else if (t.hasAttribute('data-cursor')) { cur.classList.add('is-label'); label.textContent = t.getAttribute('data-cursor'); }
+      else cur.classList.add('is-hover');
+    });
+    (function loop() {
+      var k = reduce ? 1 : .16;
+      rx += (mx - rx) * k; ry += (my - ry) * k;
+      ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0)';
+      dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+      requestAnimationFrame(loop);
+    })();
+  })();
+
+  /* ---------- Headline: distorsione WebGL al passaggio del mouse ---------- */
+  function initDistort() {
+    var wrap = $('#h1Wrap'), h1 = wrap && $('h1', wrap);
+    if (!wrap || !h1 || !fine || reduce || wrap.__gl) return;
+    var canvas = document.createElement('canvas');
+    canvas.className = 'h1-gl';
+    canvas.setAttribute('aria-hidden', 'true');
+    var gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: true });
+    if (!gl) return;
+    wrap.__gl = true;
+    wrap.appendChild(canvas);
+
+    var VS = 'attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;gl_Position=vec4(p,0.,1.);}';
+    var FS = [
+      'precision highp float;varying vec2 v;uniform sampler2D t;uniform vec2 m;uniform vec2 vel;uniform float h;uniform float time;uniform float asp;',
+      'void main(){',
+      ' vec2 uv=v; vec2 d=uv-m; d.x*=asp; float dist=length(d);',
+      ' float f=smoothstep(.42,0.,dist)*h;',
+      ' vec2 dir=dist>.0001?d/dist:vec2(0.); dir.x/=asp;',
+      ' uv-=dir*f*.045;',
+      ' uv+=vec2(sin(uv.y*46.+time*5.)*.007,cos(uv.x*28.+time*4.)*.005)*f;',
+      ' uv-=vel*f*1.1;',
+      ' vec2 ca=(vel*3.+dir*.008)*f;',
+      ' float r=texture2D(t,uv+ca).a; float g=texture2D(t,uv).a; float b=texture2D(t,uv-ca).a;',
+      ' vec3 mint=vec3(.094,.906,.737);',
+      ' vec3 col=vec3(1.)*g+mint*max(r-g,0.)+vec3(.55,.65,1.)*max(b-g,0.)*.5;',
+      ' gl_FragColor=vec4(col,max(g,max(r,b)));',
+      '}'
+    ].join('\n');
+    function sh(type, src) { var o = gl.createShader(type); gl.shaderSource(o, src); gl.compileShader(o); return o; }
+    var prog = gl.createProgram();
+    gl.attachShader(prog, sh(gl.VERTEX_SHADER, VS));
+    gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, FS));
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { canvas.remove(); return; }
+    gl.useProgram(prog);
+    var buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+    var loc = gl.getAttribLocation(prog, 'p');
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    var U = {}; ['t', 'm', 'vel', 'h', 'time', 'asp'].forEach(function (n) { U[n] = gl.getUniformLocation(prog, n); });
+    var tex = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+    var PAD = 70, W = 0, H = 0;
+    var txt = document.createElement('canvas'), ctx = txt.getContext('2d');
+    function paint() {
+      var r = h1.getBoundingClientRect(), dpr = Math.min(2, window.devicePixelRatio || 1);
+      W = r.width + PAD * 2; H = r.height + PAD * 2;
+      canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+      canvas.style.left = -PAD + 'px'; canvas.style.top = -PAD + 'px';
+      canvas.width = txt.width = Math.round(W * dpr);
+      canvas.height = txt.height = Math.round(H * dpr);
+      var cs = getComputedStyle(h1);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      ctx.font = cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
+      if ('letterSpacing' in ctx) ctx.letterSpacing = cs.letterSpacing;
+      ctx.fillStyle = '#fff';
+      ctx.textBaseline = 'alphabetic';
+      $$('.line > span', h1).forEach(function (sp) {
+        var lr = sp.getBoundingClientRect(), text = sp.textContent;
+        var mt = ctx.measureText(text);
+        var asc = mt.fontBoundingBoxAscent || parseFloat(cs.fontSize) * .95;
+        var desc = mt.fontBoundingBoxDescent || parseFloat(cs.fontSize) * .25;
+        var y = lr.top - r.top + PAD + (lr.height - (asc + desc)) / 2 + asc;
+        ctx.fillText(text, lr.left - r.left + PAD, y);
+      });
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, txt);
+      gl.uniform1i(U.t, 0);
+      gl.uniform1f(U.asp, W / H);
+      render(performance.now());
+    }
+    var mouse = { x: .5, y: .5 }, target = { x: .5, y: .5 }, vel = { x: 0, y: 0 }, hov = 0, hovT = 0, running = false;
+    function render(now) {
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.uniform2f(U.m, mouse.x, mouse.y);
+      gl.uniform2f(U.vel, vel.x, vel.y);
+      gl.uniform1f(U.h, hov);
+      gl.uniform1f(U.time, now / 1000);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    }
+    function tick(now) {
+      var px = mouse.x, py = mouse.y;
+      mouse.x += (target.x - mouse.x) * .14; mouse.y += (target.y - mouse.y) * .14;
+      vel.x += ((mouse.x - px) - vel.x) * .25; vel.y += ((mouse.y - py) - vel.y) * .25;
+      hov += (hovT - hov) * .08;
+      render(now);
+      if (hovT > 0 || hov > .002 || Math.abs(vel.x) + Math.abs(vel.y) > .0005) requestAnimationFrame(tick);
+      else { hov = 0; vel.x = vel.y = 0; render(now); running = false; }
+    }
+    function kick() { if (!running) { running = true; requestAnimationFrame(tick); } }
+    window.addEventListener('mousemove', function (e) {
+      var r = canvas.getBoundingClientRect();
+      var inside = e.clientX > r.left + PAD * .5 && e.clientX < r.right - PAD * .5 && e.clientY > r.top + PAD * .5 && e.clientY < r.bottom - PAD * .5;
+      target.x = (e.clientX - r.left) / r.width;
+      target.y = 1 - (e.clientY - r.top) / r.height;
+      hovT = inside ? 1 : 0;
+      if (inside || hov > .002) kick();
+    }, { passive: true });
+    var rt;
+    window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(paint, 150); });
+    var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    ready.then(function () { paint(); wrap.classList.add('gl-on'); });
+  }
 
   /* ---------- Avvio ---------- */
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);

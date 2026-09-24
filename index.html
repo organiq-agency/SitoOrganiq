@@ -58,9 +58,11 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/home.css?v=1">
+<link rel="stylesheet" href="css/home.css?v=2">
 </head>
 <body>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-ring"><span class="cursor-label"></span></span><span class="cursor-dot"></span></div>
 
 <!-- ============ INTRO ============ -->
 <div class="intro" id="intro" aria-hidden="true">
@@ -116,7 +118,7 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
-  <div class="hero-bg media media--video media--hero" data-video="assets/media/V-01.mp4" data-img="assets/media/IMG-01.webp" data-label="V-01 · Hero loop — logo 3D in vetro" data-eager>
+  <div class="hero-bg media media--video media--hero" data-video="assets/media/V-01.mp4" data-video-mobile="assets/media/V-01-mobile.mp4" data-img="assets/media/IMG-01.webp" data-label="V-01 · Hero video" data-eager>
     <img class="hero-ghost" src="assets/mark-mint.png" alt="" aria-hidden="true">
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
@@ -134,11 +136,11 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
     <div class="hero-bottom">
       <div class="hero-title">
         <span class="tag mono" data-hero>Agenzia social · Roma → tutta Italia</span>
-        <h1 class="display" data-hero-title>Fatti trovare.<br>Fatti ricordare.<br>Fatti scegliere.</h1>
+        <div class="h1-wrap" id="h1Wrap"><h1 class="display" data-hero-title>Fatti ricordare.<br>Fatti scegliere.</h1></div>
       </div>
 
       <aside class="hero-card" data-hero>
-        <div class="hero-card-media media media--video" data-video="assets/media/V-03.mp4" data-img="assets/media/IMG-03.webp" data-label="V-03"></div>
+        <div class="hero-card-media hero-mascot"><img src="assets/media/mascotte.webp" alt="" width="598" height="640"></div>
         <div class="hero-card-body">
           <strong>Check-up gratuito</strong>
           <span class="mono dim">2 minuti · risultato immediato</span>
@@ -208,8 +210,8 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
     </header>
 
     <div class="cases">
-      <article class="case" style="--i:0">
-        <div class="case-media media" data-img="assets/media/IMG-04.webp" data-label="IMG-04 · Camera macro"></div>
+      <article class="case" style="--i:0" data-cursor="Guarda">
+        <div class="case-media media media--top" data-img="assets/video-covers/DF-n12pCGn6.webp"></div>
         <div class="case-body">
           <div class="case-meta mono"><span>Social &amp; video</span><span class="dot"></span><span>Gaming creator</span></div>
           <p class="case-client"><img src="assets/portfolio/out-of-mana.webp" alt="" width="28" height="28" loading="lazy">Out Of Mana</p>
@@ -228,8 +230,8 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
         </div>
       </article>
 
-      <article class="case" style="--i:1">
-        <div class="case-media media" data-img="assets/media/IMG-07.webp" data-label="IMG-07 · Smartphone macro"></div>
+      <article class="case" style="--i:1" data-cursor="Guarda">
+        <div class="case-media media media--top" data-img="assets/video-covers/DHbcJxiss21.webp"></div>
         <div class="case-body">
           <div class="case-meta mono"><span>Personal brand</span><span class="dot"></span><span>Imprenditore</span></div>
           <p class="case-client"><img src="assets/logos/leonardo-leone.webp" alt="" width="28" height="28" loading="lazy">Leonardo Leone</p>
@@ -248,8 +250,8 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
         </div>
       </article>
 
-      <article class="case" style="--i:2">
-        <div class="case-media media" data-img="assets/media/IMG-05.webp" data-label="IMG-05 · Branding macro"></div>
+      <article class="case" style="--i:2" data-cursor="Guarda">
+        <div class="case-media media media--light" data-img="assets/lt-motori/corporate.jpg"></div>
         <div class="case-body">
           <div class="case-meta mono"><span>Brand identity</span><span class="dot"></span><span>Automotive</span></div>
           <p class="case-client"><img src="assets/lt-motori/logo.jpg" alt="" width="28" height="28" loading="lazy">LT Motori</p>
@@ -557,20 +559,20 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
     </header>
 
     <div class="reel-grid">
-      <a class="reel" href="https://www.instagram.com/reel/DF-n12pCGn6/" target="_blank" rel="noopener" data-reveal>
-        <div class="reel-media"><img src="assets/video-covers/DF-n12pCGn6.webp" alt="Copertina del reel di Out Of Mana" loading="lazy" width="720" height="1280"><span class="reel-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z"/></svg></span></div>
-        <p class="mono dim">Instagram <span class="dot"></span> Out Of Mana</p>
-        <h3>7,1 milioni di visualizzazioni per un reel gaming</h3>
-      </a>
-      <a class="reel" href="https://www.instagram.com/reel/DHbcJxiss21/" target="_blank" rel="noopener" data-reveal>
-        <div class="reel-media"><img src="assets/video-covers/DHbcJxiss21.webp" alt="Copertina del reel di Leonardo Leone" loading="lazy" width="720" height="1280"><span class="reel-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z"/></svg></span></div>
-        <p class="mono dim">Instagram <span class="dot"></span> Leonardo Leone</p>
-        <h3>2 milioni di visualizzazioni per un personal brand</h3>
-      </a>
-      <a class="reel" href="https://www.instagram.com/reel/DKxv5vgKjYi/" target="_blank" rel="noopener" data-reveal>
+      <a class="reel" data-cursor="Play" href="https://www.instagram.com/reel/DKxv5vgKjYi/" target="_blank" rel="noopener" data-reveal>
         <div class="reel-media"><img src="assets/video-covers/DKxv5vgKjYi.webp" alt="Copertina del reel di Cosplus3D" loading="lazy" width="720" height="1280"><span class="reel-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z"/></svg></span></div>
         <p class="mono dim">Instagram <span class="dot"></span> Cosplus3D</p>
         <h3>1,7 milioni di visualizzazioni per un e-commerce di design</h3>
+      </a>
+      <a class="reel" data-cursor="Play" href="https://www.tiktok.com/@dentisti.marrapese/video/7600107392906333462" target="_blank" rel="noopener" data-reveal>
+        <div class="reel-media"><img src="assets/video-covers/7600107392906333462.webp" alt="Copertina del video TikTok di Dentisti Marrapese" loading="lazy" width="720" height="1280"><span class="reel-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z"/></svg></span></div>
+        <p class="mono dim">TikTok <span class="dot"></span> Dentisti Marrapese</p>
+        <h3>700 mila visualizzazioni per uno studio dentistico</h3>
+      </a>
+      <a class="reel" data-cursor="Play" href="https://www.instagram.com/reel/DQAp6mhiHXc/" target="_blank" rel="noopener" data-reveal>
+        <div class="reel-media"><img src="assets/video-covers/DQAp6mhiHXc.webp" alt="Copertina del reel di Teatro Destino Libero" loading="lazy" width="720" height="1280"><span class="reel-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M5 3l8 5-8 5z"/></svg></span></div>
+        <p class="mono dim">Instagram <span class="dot"></span> Teatro Destino Libero</p>
+        <h3>400 mila visualizzazioni per una compagnia teatrale</h3>
       </a>
     </div>
   </div>
@@ -623,6 +625,7 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 <section class="cta" id="inizia" aria-labelledby="cta-title">
   <div class="cta-bg media media--video" data-video="assets/media/V-04.mp4" data-img="assets/media/IMG-10.webp" data-label="V-04 · Panorama canyon" aria-hidden="true"></div>
   <div class="cta-fade" aria-hidden="true"></div>
+  <div class="cta-scrim" aria-hidden="true"></div>
   <div class="container cta-content">
     <span class="label mono" data-scramble>Inizia da qui</span>
     <h2 id="cta-title" data-reveal>La tua attività ha più<br>potenziale di quanto pensi</h2>
@@ -673,6 +676,6 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-<script src="js/home.js?v=1" defer></script>
+<script src="js/home.js?v=2" defer></script>
 </body>
 </html>
