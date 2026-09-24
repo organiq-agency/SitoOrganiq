@@ -84,11 +84,22 @@
           "label": "Instagram"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DDaKOmeIjTa/",
+          "embed": "https://www.instagram.com/reel/DDaKOmeIjTa/embed/"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DMQYWoTIDLP/",
+          "embed": "https://www.instagram.com/reel/DMQYWoTIDLP/embed/"
+        }
+      ]
     },
     {
       "name": "Out Of Mana",
-      "description": "collettivo di creator: un singolo reel da 7,1 milioni di visualizzazioni organiche.",
+      "description": "Collettivo di creator: reel organici, tra cui un video da 7,1 milioni di visualizzazioni.",
       "category": "Gaming & Creator",
       "profiles": [
         {
@@ -102,14 +113,23 @@
           "url": "https://www.instagram.com/reel/DF-n12pCGn6/",
           "embed": "https://www.instagram.com/reel/DF-n12pCGn6/embed/",
           "views": 7100000
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DGgX3xwCIhi/",
+          "embed": "https://www.instagram.com/reel/DGgX3xwCIhi/embed/"
         }
       ]
     },
     {
       "name": "Dentisti Marrapese",
-      "description": "profilo aperto da zero, community avviata e attiva in meno di dieci giorni. Oggi su TikTok con video da centinaia di migliaia di visualizzazioni.",
+      "description": "Profilo avviato da zero: contenuti video su Instagram e TikTok, con risultati fino a centinaia di migliaia di visualizzazioni.",
       "category": "Studio Dentistico",
       "profiles": [
+        {
+          "url": "https://www.instagram.com/dentistimarrapese/",
+          "label": "Instagram"
+        },
         {
           "url": "https://www.tiktok.com/@dentisti.marrapese",
           "label": "TikTok"
@@ -121,6 +141,21 @@
           "url": "https://www.tiktok.com/@dentisti.marrapese/video/7600107392906333462",
           "embed": "https://www.tiktok.com/player/v1/7600107392906333462",
           "views": 700000
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DU5g6MOAkhw/",
+          "embed": "https://www.instagram.com/reel/DU5g6MOAkhw/embed/"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DTu-15UAhRc/",
+          "embed": "https://www.instagram.com/reel/DTu-15UAhRc/embed/"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DYe27PhCKTR/",
+          "embed": "https://www.instagram.com/reel/DYe27PhCKTR/embed/"
         }
       ]
     },
@@ -180,7 +215,18 @@
           "label": "TikTok"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DYeT8tdNODL/",
+          "embed": "https://www.instagram.com/reel/DYeT8tdNODL/embed/"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@scuola.doppiaggio.anelli/video/7632428891730201859",
+          "embed": "https://www.tiktok.com/player/v1/7632428891730201859"
+        }
+      ]
     },
     {
       "name": "Luca Monti — Ironman",
