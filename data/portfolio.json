@@ -33,13 +33,15 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DHbcJxiss21/",
           "embed": "https://www.instagram.com/reel/DHbcJxiss21/embed/",
-          "views": 2000000
+          "views": 2000000,
+          "cover": "assets/video-covers/DHbcJxiss21.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DEu5XOmoPuT/",
           "embed": "https://www.instagram.com/reel/DEu5XOmoPuT/embed/",
-          "views": 1300000
+          "views": 1300000,
+          "cover": "assets/video-covers/DEu5XOmoPuT.webp"
         }
       ]
     },
@@ -70,7 +72,8 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DKxv5vgKjYi/",
           "embed": "https://www.instagram.com/reel/DKxv5vgKjYi/embed/",
-          "views": 1700000
+          "views": 1700000,
+          "cover": "assets/video-covers/DKxv5vgKjYi.webp"
         }
       ]
     },
@@ -88,12 +91,14 @@
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DDaKOmeIjTa/",
-          "embed": "https://www.instagram.com/reel/DDaKOmeIjTa/embed/"
+          "embed": "https://www.instagram.com/reel/DDaKOmeIjTa/embed/",
+          "cover": "assets/video-covers/DDaKOmeIjTa.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DMQYWoTIDLP/",
-          "embed": "https://www.instagram.com/reel/DMQYWoTIDLP/embed/"
+          "embed": "https://www.instagram.com/reel/DMQYWoTIDLP/embed/",
+          "cover": "assets/video-covers/DMQYWoTIDLP.webp"
         }
       ]
     },
@@ -112,12 +117,14 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DF-n12pCGn6/",
           "embed": "https://www.instagram.com/reel/DF-n12pCGn6/embed/",
-          "views": 7100000
+          "views": 7100000,
+          "cover": "assets/video-covers/DF-n12pCGn6.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DGgX3xwCIhi/",
-          "embed": "https://www.instagram.com/reel/DGgX3xwCIhi/embed/"
+          "embed": "https://www.instagram.com/reel/DGgX3xwCIhi/embed/",
+          "cover": "assets/video-covers/DGgX3xwCIhi.webp"
         }
       ]
     },
@@ -140,22 +147,26 @@
           "platform": "TikTok",
           "url": "https://www.tiktok.com/@dentisti.marrapese/video/7600107392906333462",
           "embed": "https://www.tiktok.com/player/v1/7600107392906333462",
-          "views": 700000
+          "views": 700000,
+          "cover": "assets/video-covers/7600107392906333462.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DU5g6MOAkhw/",
-          "embed": "https://www.instagram.com/reel/DU5g6MOAkhw/embed/"
+          "embed": "https://www.instagram.com/reel/DU5g6MOAkhw/embed/",
+          "cover": "assets/video-covers/DU5g6MOAkhw.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DTu-15UAhRc/",
-          "embed": "https://www.instagram.com/reel/DTu-15UAhRc/embed/"
+          "embed": "https://www.instagram.com/reel/DTu-15UAhRc/embed/",
+          "cover": "assets/video-covers/DTu-15UAhRc.webp"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DYe27PhCKTR/",
-          "embed": "https://www.instagram.com/reel/DYe27PhCKTR/embed/"
+          "embed": "https://www.instagram.com/reel/DYe27PhCKTR/embed/",
+          "cover": "assets/video-covers/DYe27PhCKTR.webp"
         }
       ]
     },
@@ -169,7 +180,8 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DQAp6mhiHXc/",
           "embed": "https://www.instagram.com/reel/DQAp6mhiHXc/embed/",
-          "views": 400000
+          "views": 400000,
+          "cover": "assets/video-covers/DQAp6mhiHXc.webp"
         }
       ]
     },
@@ -219,12 +231,14 @@
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DYeT8tdNODL/",
-          "embed": "https://www.instagram.com/reel/DYeT8tdNODL/embed/"
+          "embed": "https://www.instagram.com/reel/DYeT8tdNODL/embed/",
+          "cover": "assets/video-covers/DYeT8tdNODL.webp"
         },
         {
           "platform": "TikTok",
           "url": "https://www.tiktok.com/@scuola.doppiaggio.anelli/video/7632428891730201859",
-          "embed": "https://www.tiktok.com/player/v1/7632428891730201859"
+          "embed": "https://www.tiktok.com/player/v1/7632428891730201859",
+          "cover": "assets/video-covers/7632428891730201859.webp"
         }
       ]
     },

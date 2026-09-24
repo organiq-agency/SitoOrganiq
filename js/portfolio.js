@@ -16,9 +16,10 @@
     new ResizeObserver(sync).observe(track); sync();
   });
   document.querySelectorAll('.video-launch').forEach(button => button.addEventListener('click', () => {
-    // Unload previous player so two videos cannot keep playing together.
+    // Keep one active player; the cover stays available when it closes.
     document.querySelectorAll('.video-stage iframe').forEach(frame => {
-      frame.previousElementSibling.hidden = false; frame.remove();
+      frame.previousElementSibling.hidden = false;
+      frame.remove();
     });
     const frame = document.createElement('iframe');
     frame.src = button.dataset.embed;
@@ -26,7 +27,9 @@
     frame.allow = 'fullscreen; encrypted-media; picture-in-picture';
     frame.allowFullscreen = true;
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
-    button.hidden = true; button.after(frame); frame.focus();
+    button.hidden = true;
+    button.after(frame);
+    frame.focus();
   }));
   const number = document.querySelector('.views-number');
   const toggle = document.getElementById('counter-toggle');
