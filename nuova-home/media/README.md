@@ -1,6 +1,6 @@
 # Media homepage
 
-Metti qui i file finali con questi nomi esatti: la homepage li carica da sola.
+Metti qui (nuova-home/media) i file finali con questi nomi esatti: la homepage li carica da sola.
 Se un file manca, resta il placeholder.
 
 | File | Dove va | Formato consigliato |

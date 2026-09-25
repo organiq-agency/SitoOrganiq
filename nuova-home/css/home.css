@@ -4,12 +4,12 @@
    Display: Ibrand (fallback Fredoka) · Testo: Geist · Etichette: Geist Mono
    ============================================================ */
 
-/* Ibrand: inserire il file in assets/fonts/ (licenza d'uso web necessaria) */
+/* Ibrand: inserire il file in nuova-home/fonts/ (licenza d'uso web necessaria) */
 @font-face{
   font-family:'Ibrand';
-  src:url('../assets/fonts/Ibrand.woff2') format('woff2'),
-      url('../assets/fonts/Ibrand.woff') format('woff'),
-      url('../assets/fonts/Ibrand.otf') format('opentype');
+  src:url('../fonts/Ibrand.woff2') format('woff2'),
+      url('../fonts/Ibrand.woff') format('woff'),
+      url('../fonts/Ibrand.otf') format('opentype');
   font-weight:400 700;font-display:swap;
 }
 
