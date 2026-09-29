@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/brand-work.css?v=d51c05b3ef">
 <link rel="stylesheet" href="css/navigation.css?v=2fdafb7749">
 <meta name="theme-color" content="#050506">
-<link rel="stylesheet" href="css/site-theme.css?v=1">
+<link rel="stylesheet" href="css/site-theme.css?v=2">
 </head>
 <body class="site-inner">
 
@@ -34,7 +34,7 @@
       Organiq<span class="accent">.</span>
     </a>
     <nav aria-label="Navigazione principale">
-      <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="servizi.html">Servizi</a></li><li class="project-menu"><div class="project-menu-top"><a href="portfolio.html" aria-current="page">Progetti</a><button class="project-toggle" aria-label="Apri categorie progetti" aria-expanded="false" aria-controls="project-dropdown">⌄</button></div><ul class="project-dropdown" id="project-dropdown" hidden><li><a href="portfolio.html#social-video">Social e video</a></li><li><a href="portfolio.html#brand-design">Loghi e brandbook</a></li><li><a href="portfolio.html#landing-realizzate">Siti web</a></li></ul></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
+      <ul class="nav-links"><li><a href="servizi.html">Servizi</a></li><li class="project-menu"><div class="project-menu-top"><a href="portfolio.html" aria-current="page">Progetti</a><button class="project-toggle" aria-label="Apri categorie progetti" aria-expanded="false" aria-controls="project-dropdown">⌄</button></div><ul class="project-dropdown" id="project-dropdown" hidden><li><a href="portfolio.html#social-video">Social e video</a></li><li><a href="portfolio.html#brand-design">Loghi e brandbook</a></li><li><a href="portfolio.html#landing-realizzate">Siti web</a></li></ul></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
     </nav>
     <a href="check-up.html" class="btn btn-primary nav-cta">Scopri quanto puoi crescere</a>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri menu">
@@ -50,11 +50,19 @@
 
 <main>
 
-<section class="page-hero">
-  <div class="container">
-    <span class="eyebrow">I progetti Organiq</span>
-    <h1>Social. Identità. Web.<br><span class="accent-grad">Il lavoro prende forma.</span></h1>
-    <p class="lead">Dai contenuti social ai loghi, fino ai siti web. Scegli una categoria ed esplora i progetti realizzati.</p>
+<section class="page-hero editorial-hero editorial-hero--portfolio">
+  <div class="container editorial-hero-grid">
+    <div class="editorial-hero-copy">
+      <span class="eyebrow">I progetti Organiq</span>
+      <h1>Social. Identità. Web.<br><span class="accent-grad">Il lavoro prende forma.</span></h1>
+      <p class="lead">Dai contenuti social ai loghi, fino ai siti web. Scegli una categoria ed esplora i progetti realizzati.</p>
+    </div>
+    <div class="editorial-hero-visual portfolio-art" aria-hidden="true">
+      <figure class="art-frame art-frame--one"><img src="assets/video-covers/DF-n12pCGn6.webp" alt="" width="720" height="1280"><figcaption>Social & video <strong>Out Of Mana</strong></figcaption></figure>
+      <figure class="art-frame art-frame--two"><img src="assets/video-covers/DHbcJxiss21.webp" alt="" width="720" height="1280"><figcaption>Personal brand <strong>Leonardo Leone</strong></figcaption></figure>
+      <figure class="art-frame art-frame--three"><img src="assets/lt-motori/logo.jpg" alt="" width="1254" height="1254"><figcaption>Brand identity <strong>LT Motori</strong></figcaption></figure>
+      <span class="art-stamp">Lavori veri.<br>Numeri visibili.</span>
+    </div>
   </div>
 </section>
 
@@ -99,32 +107,35 @@
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">
-          <img src="assets/mark-mint.png" alt="" width="40" height="32">
-          Organiq<span class="accent">.</span>
-        </div>
-        <p>Social Media &amp; Digital Agency. Facciamo crescere i business in modo organico: strategia, contenuti e piattaforme digitali.</p>
-      </div>
-      <div>
-        <h4>Naviga</h4>
-        <ul><li><a href="index.html">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><a href="portfolio.html" aria-current="page">Progetti</a></li><li><a href="chi-siamo.html">Chi siamo</a></li><li><a href="contatti.html">Contatti</a></li></ul>
-      </div>
-      <div>
-        <h4>Contatti</h4>
-        <ul>
-          <li><a href="mailto:organiqsocialagency@gmail.com">organiqsocialagency@gmail.com</a></li>
-          <li><a href="contatti.html">Scrivici</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="nav-logo" href="index.html" aria-label="Organiq — Home">
+        <img src="assets/mark-mint.png" alt="" width="34" height="27">
+        <span>Organiq<em>.</em></span>
+      </a>
+      <p class="footer-claim">Fatti trovare.<br>Fatti ricordare.<br>Fatti scegliere.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Organiq. — organiq-agency.it</span>
-      <span>I numeri non mentono.</span>
+    <nav class="footer-col" aria-label="Navigazione footer">
+      <span class="mono dim">Navigazione</span>
+      <a href="index.html">Home</a>
+      <a href="servizi.html">Servizi</a>
+      <a href="portfolio.html">Progetti</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="contatti.html">Contatti</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <div class="footer-col">
+      <span class="mono dim">Email</span>
+      <a class="footer-mail" href="mailto:organiqsocialagency@gmail.com">organiqsocialagency@gmail.com</a>
+      <span class="mono dim">Dove siamo</span>
+      <p>Base a Roma, clienti in tutta Italia</p>
+      <span class="mono dim">Check-up gratuito</span>
+      <a class="link-arrow" href="check-up.html">Scopri quanto puoi crescere <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a>
     </div>
+  </div>
+  <div class="container footer-bottom mono dim">
+    <span>© 2026 Organiq. Tutti i diritti riservati.</span>
+    <span>I numeri non mentono.</span>
   </div>
 </footer>
 
