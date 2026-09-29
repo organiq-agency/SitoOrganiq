@@ -4,15 +4,6 @@
    Display: Ibrand (fallback Fredoka) · Testo: Geist · Etichette: Geist Mono
    ============================================================ */
 
-/* Ibrand: inserire il file in nuova-home/fonts/ (licenza d'uso web necessaria) */
-@font-face{
-  font-family:'Ibrand';
-  src:url('../fonts/Ibrand.woff2') format('woff2'),
-      url('../fonts/Ibrand.woff') format('woff'),
-      url('../fonts/Ibrand.otf') format('opentype');
-  font-weight:400 700;font-display:swap;
-}
-
 :root{
   color-scheme:dark;
   --bg:#050506;
@@ -33,7 +24,7 @@
   --warn:#c9a86a;
   --no:#7a7a82;
 
-  --f-display:'Ibrand','Fredoka',system-ui,sans-serif;
+  --f-display:'Fredoka',system-ui,sans-serif;
   --f-sans:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;
   --f-mono:'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
 
@@ -618,3 +609,19 @@ body.show-no-ph .media::after{display:none}
   .hero-card-body{min-width:0}
   .hero-card .btn--xs{font-size:12.5px;padding:0 10px}
 }
+
+/* Shared projects navigation in the promoted homepage. */
+.nav-links .project-menu{position:relative;display:flex;align-items:center}
+.nav-links .project-menu-top{display:flex;align-items:center}
+.nav-links .project-toggle{width:28px;height:38px;display:grid;place-items:center;color:var(--grey);font-size:20px;border-radius:4px}
+.nav-links .project-toggle:hover,.nav-links .project-toggle[aria-expanded="true"]{background:var(--card-3);color:var(--mint)}
+.nav-links .project-dropdown{position:absolute;top:calc(100% + 14px);left:0;min-width:230px;z-index:120;padding:8px;display:grid;gap:3px;background:var(--card);border:1px solid var(--line-2);border-radius:9px;box-shadow:0 24px 56px #0009}
+.nav-links .project-dropdown[hidden]{display:none}
+.nav-links .project-dropdown a{display:block;padding:11px 12px;border-radius:5px;white-space:nowrap;font-size:13px}
+.nav-links .project-dropdown a:hover,.nav-links .project-dropdown a:focus-visible{background:var(--card-3);color:var(--mint)}
+.mmenu .mobile-projects{border-bottom:1px solid var(--line)}
+.mmenu .mobile-projects summary{padding:10px 0;font-family:var(--f-display);font-size:34px;cursor:pointer;list-style:none}
+.mmenu .mobile-projects summary::after{content:'+';float:right;color:var(--mint);font-family:var(--f-sans);font-size:25px}
+.mmenu .mobile-projects[open] summary::after{content:'−'}
+.mmenu .mobile-projects a{font-family:var(--f-sans);font-size:17px;padding:8px 12px;border:0;color:var(--grey)}
+@media(max-width:640px){.mmenu .mobile-projects summary{font-size:30px}}
