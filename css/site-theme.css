@@ -307,9 +307,9 @@ body.site-inner .art-stamp{
   font:500 12px/1.25 var(--font-head);
   transform:rotate(10deg);
 }
-body.site-inner .portfolio-art .art-frame--one{z-index:2;left:1%;top:7%;width:40%;height:85%}
-body.site-inner .portfolio-art .art-frame--two{z-index:1;left:34%;top:0;width:41%;height:79%}
-body.site-inner .portfolio-art .art-frame--three{z-index:3;right:0;bottom:0;width:35%;height:47%}
+body.site-inner .portfolio-art .art-frame--one{left:0;top:9%;width:32%;height:82%}
+body.site-inner .portfolio-art .art-frame--two{left:34%;top:0;width:32%;height:82%}
+body.site-inner .portfolio-art .art-frame--three{right:0;bottom:0;width:32%;height:63%}
 body.site-inner .portfolio-art .art-frame--three img{object-fit:contain;background:#050506;padding:10px 10px 32px}
 body.site-inner .portfolio-art .art-stamp{right:1%;top:2%}
 body.site-inner .people-art .art-frame--one{z-index:2;left:5%;top:2%;width:52%;height:90%}
@@ -433,6 +433,9 @@ body.site-inner .thanks-mark{display:block;width:90px;height:90px;object-fit:con
   body.site-inner .editorial-hero{padding-top:112px;padding-bottom:48px}
   body.site-inner .editorial-hero h1{font-size:clamp(2.7rem,11.5vw,3.8rem)}
   body.site-inner .editorial-hero-visual{height:280px}
+  body.site-inner .portfolio-art{display:flex;align-items:center;gap:10px;height:250px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--mint) transparent}
+  body.site-inner .portfolio-art .art-frame{position:relative;inset:auto;flex:0 0 47%;width:auto;height:220px;scroll-snap-align:start}
+  body.site-inner .portfolio-art .art-stamp{display:none}
   body.site-inner .editorial-hero--privacy .editorial-hero-visual{height:180px}
   body.site-inner .art-stamp{width:74px;height:74px;font-size:10px}
   body.site-inner .footer-col{font-size:15px}
