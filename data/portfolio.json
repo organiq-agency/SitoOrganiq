@@ -325,11 +325,24 @@
       "category": "Personal Brand · Atleta",
       "profiles": [
         {
-          "url": "https://www.instagram.com/lucamonti_ironman",
+          "url": "https://www.instagram.com/lucamonti_ironman/",
           "label": "Instagram"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DaDmB3EqN_y/",
+          "embed": "https://www.instagram.com/reel/DaDmB3EqN_y/embed/",
+          "cover": "assets/video-covers/DaDmB3EqN_y.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DX1ctPkKWZD/",
+          "embed": "https://www.instagram.com/reel/DX1ctPkKWZD/embed/",
+          "cover": "assets/video-covers/DX1ctPkKWZD.webp"
+        }
+      ]
     }
   ]
 }
