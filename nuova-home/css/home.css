@@ -312,6 +312,9 @@ body.show-no-ph .media::after{display:none}
 .service-text li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--txt);font-size:11px}
 .service-text li:last-child{border-bottom:0}
 .service-media{border-radius:var(--r);min-height:260px}
+.service-title-link{transition:color .2s}
+.service-title-link:hover{color:var(--mint)}
+.service-media[href]{display:block}
 
 /* ---------- Perché noi ---------- */
 .why{overflow:hidden}
