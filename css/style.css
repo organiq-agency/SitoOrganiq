@@ -568,4 +568,8 @@ a.reel-card:hover img{opacity:.85}
 .video-launch .video-platform,.video-launch .play-symbol,.video-launch .video-owner,.video-launch>span:last-child{z-index:1;position:relative}
 .video-launch .video-platform{position:absolute}
 .video-launch .play-symbol{display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:rgba(9,20,14,.72);backdrop-filter:blur(6px);font-size:52px;line-height:1;color:#baffda}
+.video-pending--post{text-decoration:none;cursor:pointer;background:radial-gradient(ellipse at 80% 10%,#214b3d,transparent 70%),linear-gradient(150deg,#17251e,#0b100d)}
+.video-pending--post:hover{background:radial-gradient(ellipse at 80% 10%,#327b5f,transparent 70%),#101c16}
+.video-pending--post:focus-visible{outline:3px solid var(--mint);outline-offset:-3px}
+.video-pending--post .pending-number{font-size:108px;line-height:1;color:var(--mint)}
 @media(prefers-reduced-motion:reduce){.video-launch .video-cover{transition:none}.video-launch:hover .video-cover{transform:none}}

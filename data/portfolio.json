@@ -16,7 +16,20 @@
           "label": "Instagram"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DD7fI5fIUW8/",
+          "embed": "https://www.instagram.com/reel/DD7fI5fIUW8/embed/",
+          "cover": "assets/video-covers/DD7fI5fIUW8.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/p/DCrmYjoo_DD/",
+          "embed": "https://www.instagram.com/p/DCrmYjoo_DD/embed/",
+          "previewUnavailable": true
+        }
+      ]
     },
     {
       "name": "Leonardo Leone",
@@ -55,7 +68,20 @@
           "label": "Instagram"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DFf2GA4oWrD/",
+          "embed": "https://www.instagram.com/reel/DFf2GA4oWrD/embed/",
+          "cover": "assets/video-covers/DFf2GA4oWrD.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DFnyNDdsWCD/",
+          "embed": "https://www.instagram.com/reel/DFnyNDdsWCD/embed/",
+          "cover": "assets/video-covers/DFnyNDdsWCD.webp"
+        }
+      ]
     },
     {
       "name": "Cosplus3D",
@@ -74,6 +100,12 @@
           "embed": "https://www.instagram.com/reel/DKxv5vgKjYi/embed/",
           "views": 1700000,
           "cover": "assets/video-covers/DKxv5vgKjYi.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DPQqmUtDONk/",
+          "embed": "https://www.instagram.com/reel/DPQqmUtDONk/embed/",
+          "cover": "assets/video-covers/DPQqmUtDONk.webp"
         }
       ]
     },
@@ -174,7 +206,12 @@
       "name": "Teatro Destino Libero",
       "description": "dal profilo vuoto a una platea coinvolta in meno di due settimane.",
       "category": "Teatro",
-      "profiles": [],
+      "profiles": [
+        {
+          "url": "https://www.tiktok.com/@teatro.destino.libero",
+          "label": "TikTok"
+        }
+      ],
       "videos": [
         {
           "platform": "Instagram",
@@ -182,6 +219,24 @@
           "embed": "https://www.instagram.com/reel/DQAp6mhiHXc/embed/",
           "views": 400000,
           "cover": "assets/video-covers/DQAp6mhiHXc.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DQQtyKFDA3o/",
+          "embed": "https://www.instagram.com/reel/DQQtyKFDA3o/embed/",
+          "cover": "assets/video-covers/DQQtyKFDA3o.webp"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@teatro.destino.libero/video/7560409970773134614",
+          "embed": "https://www.tiktok.com/player/v1/7560409970773134614",
+          "cover": "assets/video-covers/7560409970773134614.webp"
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@teatro.destino.libero/video/7581150096260173078",
+          "embed": "https://www.tiktok.com/player/v1/7581150096260173078",
+          "cover": "assets/video-covers/7581150096260173078.webp"
         }
       ]
     },
@@ -195,23 +250,45 @@
           "label": "Instagram"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DavqksUMr1O/",
+          "embed": "https://www.instagram.com/reel/DavqksUMr1O/embed/",
+          "cover": "assets/video-covers/DavqksUMr1O.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DZ7megEsALJ/",
+          "embed": "https://www.instagram.com/reel/DZ7megEsALJ/embed/",
+          "cover": "assets/video-covers/DZ7megEsALJ.webp"
+        }
+      ]
     },
     {
-      "name": "SP Motors",
-      "description": "Concessionaria a Roma: storytelling di auto e motori, su Instagram e TikTok.",
+      "name": "LT Motori",
+      "description": "Concessionaria a Roma: una nuova identità e contenuti video dedicati al mondo auto.",
       "category": "Automotive",
       "profiles": [
         {
-          "url": "https://www.instagram.com/sp_motors_roma",
+          "url": "https://www.instagram.com/lt_motori/",
           "label": "Instagram"
-        },
-        {
-          "url": "https://www.tiktok.com/@sp_motors_",
-          "label": "TikTok"
         }
       ],
-      "videos": []
+      "videos": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DbdI-WTtzUB/",
+          "embed": "https://www.instagram.com/reel/DbdI-WTtzUB/embed/",
+          "cover": "assets/video-covers/DbdI-WTtzUB.webp"
+        },
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/reel/DctJtGRNWuD/",
+          "embed": "https://www.instagram.com/reel/DctJtGRNWuD/embed/",
+          "cover": "assets/video-covers/DctJtGRNWuD.webp"
+        }
+      ]
     },
     {
       "name": "La Compagnia Degli Anelli",
