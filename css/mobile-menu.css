@@ -1,0 +1,117 @@
+/* Mobile navigation shared by the homepage and the inner pages. */
+@media (max-width:900px) {
+  .mmenu,
+  body.site-inner .nav-mobile {
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding:22px clamp(22px,6vw,36px) max(24px,env(safe-area-inset-bottom));
+    background:linear-gradient(165deg,#0b1211 0%,#080a0b 42%,#050506 100%);
+    scrollbar-width:thin;
+    scrollbar-color:rgba(24,231,188,.38) transparent;
+  }
+
+  .mmenu {justify-content:flex-start;gap:0}
+  body.site-inner .nav-mobile.open {display:flex;flex-direction:column}
+  .mmenu nav,
+  body.site-inner .nav-mobile ul {display:flex;flex-direction:column;gap:0;width:100%;flex:none;margin:0;padding:0}
+  body.site-inner .nav-mobile ul>li {width:100%;margin:0;padding:0}
+
+  .mmenu nav>a,
+  .mmenu .mobile-projects>summary,
+  body.site-inner .nav-mobile ul>li>a,
+  body.site-inner .nav-mobile .mobile-projects>summary {
+    display:flex;
+    align-items:center;
+    width:100%;
+    min-height:62px;
+    margin:0;
+    padding:9px 0;
+    border:0;
+    border-bottom:1px solid rgba(255,255,255,.11);
+    border-radius:0;
+    background:transparent;
+    color:#f4f4f5;
+    font:500 clamp(25px,7.2vw,30px)/1.15 'Fredoka',system-ui,sans-serif;
+    letter-spacing:-.025em;
+    text-decoration:none;
+  }
+  .mmenu nav>a[aria-current="page"],
+  body.site-inner .nav-mobile ul>li>a[aria-current="page"] {color:#18e7bc}
+
+  .mmenu .mobile-projects,
+  body.site-inner .nav-mobile .mobile-projects {display:block;width:100%;margin:0;padding:0;border:0;border-bottom:1px solid rgba(255,255,255,.11)}
+  .mmenu .mobile-projects>summary,
+  body.site-inner .nav-mobile .mobile-projects>summary {border-bottom:0;cursor:pointer;list-style:none;justify-content:space-between}
+  .mmenu .mobile-projects>summary::-webkit-details-marker,
+  body.site-inner .nav-mobile .mobile-projects>summary::-webkit-details-marker {display:none}
+  .mmenu .mobile-projects>summary::after,
+  body.site-inner .nav-mobile .mobile-projects>summary::after {
+    content:"";
+    float:none;
+    flex:none;
+    width:10px;
+    height:10px;
+    margin:0 6px 5px 0;
+    border-right:2px solid #18e7bc;
+    border-bottom:2px solid #18e7bc;
+    transform:rotate(45deg);
+    transition:transform .2s ease,margin .2s ease;
+  }
+  .mmenu .mobile-projects[open]>summary::after,
+  body.site-inner .nav-mobile .mobile-projects[open]>summary::after {content:"";transform:rotate(225deg);margin:5px 6px 0 0}
+  .mmenu .mobile-projects[open],
+  body.site-inner .nav-mobile .mobile-projects[open] {padding-bottom:10px}
+  .mmenu .mobile-projects>a,
+  body.site-inner .nav-mobile .mobile-projects>a {
+    display:flex;
+    align-items:center;
+    width:100%;
+    min-height:45px;
+    margin:0;
+    padding:9px 16px;
+    border:0;
+    border-left:1px solid rgba(24,231,188,.42);
+    border-radius:0;
+    background:rgba(24,231,188,.045);
+    color:#c4cdca;
+    font:400 15px/1.25 'Geist',system-ui,sans-serif;
+    letter-spacing:0;
+    text-decoration:none;
+  }
+  .mmenu .mobile-projects>a::before,
+  body.site-inner .nav-mobile .mobile-projects>a::before {content:"";flex:none;width:4px;height:4px;margin-right:13px;border-radius:50%;background:#18e7bc}
+  .mmenu .mobile-projects>a:hover,
+  .mmenu .mobile-projects>a:focus-visible,
+  body.site-inner .nav-mobile .mobile-projects>a:hover,
+  body.site-inner .nav-mobile .mobile-projects>a:focus-visible {background:rgba(24,231,188,.12);color:#f4f4f5}
+
+  .mmenu>.btn,
+  body.site-inner .nav-mobile>.btn {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:52px;
+    flex:none;
+    margin:24px 0 0;
+    margin-top:auto;
+    padding:13px 16px;
+    border-radius:8px;
+    background:#18e7bc;
+    color:#03261d;
+    font:600 15px/1.2 'Geist',system-ui,sans-serif;
+    text-align:center;
+    letter-spacing:-.01em;
+  }
+  .mmenu>.btn:hover,
+  body.site-inner .nav-mobile>.btn:hover {background:#4df3d0;color:#03261d}
+  .mmenu>.btn:focus-visible,
+  body.site-inner .nav-mobile>.btn:focus-visible,
+  .mmenu .mobile-projects>summary:focus-visible,
+  body.site-inner .nav-mobile .mobile-projects>summary:focus-visible {outline:2px solid #18e7bc;outline-offset:3px}
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .mmenu .mobile-projects>summary::after,
+  body.site-inner .nav-mobile .mobile-projects>summary::after {transition:none}
+}
