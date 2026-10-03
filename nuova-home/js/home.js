@@ -237,7 +237,7 @@
     gsap.set('.ring', { svgOrigin: '500 500', scale: .4, opacity: 0 });
     gsap.set(chips, { opacity: 0, scale: .85, y: 14, filter: 'blur(6px)' });
     gsap.set('.pain-title', { opacity: .15, scale: .92 });
-    var ptl = gsap.timeline({ scrollTrigger: { trigger: '.pain', start: 'top top', end: 'bottom bottom', scrub: .8 } });
+    var ptl = gsap.timeline({ scrollTrigger: { trigger: '.pain', start: 'top top', end: 'bottom bottom', scrub: .3 } });
     ptl.to('.pain-title', { opacity: 1, scale: 1, duration: 1.2, ease: 'none' }, 0)
       .to('.ring-1', { scale: 1, opacity: 1, rotation: 70, duration: 2.2, ease: 'none' }, 0)
       .to('.ring-2', { scale: 1, opacity: 1, rotation: -50, duration: 2.6, ease: 'none' }, .3)

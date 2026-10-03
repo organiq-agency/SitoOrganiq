@@ -221,8 +221,17 @@ body.show-no-ph .media::after{display:none}
 .logo-grid li.is-lit::after{opacity:.55}
 .logo-grid li:hover img,.logo-grid li.is-lit img{filter:none;opacity:1}
 
+/* ---------- Video di presentazione ---------- */
+.brand-film{padding-top:clamp(64px,8vw,112px);padding-bottom:clamp(64px,8vw,112px);background:var(--bg-2)}
+.brand-film-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);align-items:center;gap:clamp(36px,8vw,120px)}
+.brand-film-copy{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.brand-film-copy h2{font-size:clamp(2.5rem,5vw,4.75rem)}
+.brand-film-note{color:var(--dim)}
+.brand-film-frame{width:100%;aspect-ratio:9/16;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line-2);background:#080d0c;box-shadow:0 24px 80px rgba(0,0,0,.3)}
+.brand-film-frame video{width:100%;height:100%;object-fit:cover}
+
 /* ---------- Costo nascosto (sticky + cerchi) ---------- */
-.pain{position:relative;height:420vh}
+.pain{position:relative;height:340vh}
 .pain-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center}
 .pain-rings{position:absolute;width:min(135vmin,1300px);height:auto;left:50%;top:50%;transform:translate(-50%,-50%);overflow:visible}
 .pain-rings circle{fill:none;stroke:url(#ringGrad);stroke-width:1.2;vector-effect:non-scaling-stroke}
@@ -467,6 +476,9 @@ body.show-no-ph .media::after{display:none}
   .hero-card{min-width:0}
   .logo-grid{grid-template-columns:repeat(2,1fr)}
   .logo-grid li{justify-content:flex-start;font-size:14px}
+  .brand-film-grid{grid-template-columns:1fr;justify-items:center}
+  .brand-film-copy{width:100%}
+  .brand-film-frame{max-width:360px}
   .case{grid-template-columns:1fr;min-height:0;top:calc(var(--nav-h) + 14px + var(--i)*10px)}
   .case-media{min-height:0;aspect-ratio:16/10}
   .case-main{padding-top:24px}
@@ -494,7 +506,7 @@ body.show-no-ph .media::after{display:none}
   .hero-list{font-size:11px}
   .intro-list{font-size:12px}
   .intro-list span{min-width:200px}
-  .pain{height:360vh}
+  .pain{height:300vh}
   .pain-rings{width:190vmin}
   .chip{font-size:13px;padding:8px 11px}
   .c1{left:auto;right:6%;top:18%}
