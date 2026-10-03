@@ -31,19 +31,4 @@
     button.after(frame);
     frame.focus();
   }));
-  const number = document.querySelector('.views-number');
-  const toggle = document.getElementById('counter-toggle');
-  if (!number || !toggle) return;
-  let value = Number(number.dataset.base), paused = motion.matches;
-  const label = () => { toggle.textContent = paused ? 'Riprendi animazione' : 'Pausa animazione'; toggle.setAttribute('aria-pressed', String(paused)); };
-  toggle.addEventListener('click', () => { paused = !paused; label(); });
-  motion.addEventListener('change', () => { paused = motion.matches; label(); });
-  let visible = false;
-  new IntersectionObserver(entries => { visible = entries[0].isIntersecting; }).observe(number);
-  setInterval(() => {
-    if (paused || document.hidden || !visible) return;
-    value += Number(number.dataset.increment);
-    number.textContent = value.toLocaleString('it-IT');
-  }, Number(number.dataset.interval));
-  label();
 })();

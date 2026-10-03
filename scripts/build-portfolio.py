@@ -28,11 +28,12 @@ best=sorted([(c,v) for c in data['clients'] for v in c['videos'] if isinstance(v
 cards=[]
 for c,v in best:
  s=card(c,v); views=f'{v["views"]:,}'.replace(',','.')
- s=s.replace('</article>',f'<div class="video-result"><strong>{views}</strong><span>visualizzazioni · dato fornito da Organiq</span></div></article>'); cards.append(s)
+ s=s.replace('</article>',f'<div class="video-result"><strong>{views}</strong><span>visualizzazioni indicate da Organiq · apri il video</span></div></article>'); cards.append(s)
 parts.append(f'<section class="section" id="video-risultati"><div class="container"><div class="section-head"><span class="eyebrow">I migliori risultati</span><h2>Storie che hanno <span class="accent-grad">viaggiato lontano.</span></h2><p class="lead">Visualizzazioni aggiornate manualmente, non in tempo reale.</p></div>{carousel(cards,"best-video-track")}</div></section>')
-c=data['counter']; base=f'{c["base"]:,}'.replace(',','.')
-label='Totale comunicato da Organiq' if c['verified'] else 'Anteprima del totale · dato da confermare'
-parts.append(f'''<section class="section"><div class="container"><div class="views-total"><span class="eyebrow">{label}</span><h2>Le nostre storie.<br>Milioni di volte.</h2><div class="views-number" data-base="{c['base']}" data-increment="{c['increment']}" data-interval="{c['intervalMs']}">{base}</div><p>Visualizzazioni sui profili dei nostri clienti</p><p class="counter-note">Simulazione grafica: +600 ogni 3 secondi. Non è una misurazione in tempo reale.</p><button class="btn btn-secondary" id="counter-toggle" aria-pressed="false">Pausa animazione</button></div></div></section>''')
+total=sum(v['views'] for c,v in best)
+base=f'{total:,}'.replace(',','.')
+count_label='Sei' if len(best)==6 else str(len(best))
+parts.append(f'''<section class="section"><div class="container"><div class="views-total"><span class="eyebrow">I video in evidenza</span><h2>{count_label} video, un totale<br>da esplorare.</h2><div class="views-number">{base}</div><p>Visualizzazioni complessive dei {len(best)} video qui sopra</p><p class="counter-note">Somma dei dati indicati per ogni video, aggiornata manualmente. Apri i contenuti per vedere i risultati sui rispettivi profili.</p></div></div></section>''')
 page=root/'portfolio.html'; src=page.read_text(); content='\n'.join(parts)
 if '<!-- VIDEO PORTFOLIO START -->' in src:
  src=re.sub(r'<!-- VIDEO PORTFOLIO START -->.*?<!-- VIDEO PORTFOLIO END -->',lambda _: '<!-- VIDEO PORTFOLIO START -->\n'+content+'\n<!-- VIDEO PORTFOLIO END -->',src,flags=re.S)

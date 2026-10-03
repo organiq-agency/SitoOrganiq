@@ -1,10 +1,4 @@
 {
-  "counter": {
-    "base": 25000000,
-    "verified": false,
-    "increment": 600,
-    "intervalMs": 3000
-  },
   "clients": [
     {
       "name": "Leone Master School",
@@ -33,7 +27,7 @@
     },
     {
       "name": "Leonardo Leone",
-      "description": "il profilo personale di un imprenditore trasformato in un canale di autorevolezza e acquisizione.",
+      "description": "Contenuti video per raccontare il lavoro di un imprenditore. Due reel hanno superato 2 e 1,3 milioni di visualizzazioni.",
       "category": "Personal Brand",
       "profiles": [
         {
@@ -60,8 +54,8 @@
     },
     {
       "name": "Io Creo Il Mio Destino",
-      "description": "la community di un percorso formativo, alimentata con contenuti costanti e riconoscibili.",
-      "category": "Eventi & Community",
+      "description": "Contenuti dedicati alla community di un percorso formativo.",
+      "category": "Eventi e community",
       "profiles": [
         {
           "url": "https://www.instagram.com/iocreoilmiodestino_official",
@@ -85,8 +79,8 @@
     },
     {
       "name": "Cosplus3D",
-      "description": "designer di maschere per artisti: 42.000 follower costruiti con contenuti riconoscibili.",
-      "category": "Design & E-commerce",
+      "description": "Maschere progettate per artisti e raccontate attraverso video e immagini.",
+      "category": "Design e stampa 3D",
       "profiles": [
         {
           "url": "https://www.instagram.com/cosplus3d",
@@ -111,8 +105,8 @@
     },
     {
       "name": "Crybaby.ely",
-      "description": "performer e cosplayer: community da 19.300 follower attivi.",
-      "category": "Artist & Performer",
+      "description": "Contenuti per il profilo di una performer e cosplayer.",
+      "category": "Artista e performer",
       "profiles": [
         {
           "url": "https://www.instagram.com/elisa.crybaby",
@@ -137,7 +131,7 @@
     {
       "name": "Out Of Mana",
       "description": "Collettivo di creator: reel organici, tra cui un video da 7,1 milioni di visualizzazioni.",
-      "category": "Gaming & Creator",
+      "category": "Gaming e creator",
       "profiles": [
         {
           "url": "https://www.instagram.com/outofmana_mtg/",
@@ -163,7 +157,7 @@
     {
       "name": "Dentisti Marrapese",
       "description": "Profilo avviato da zero: contenuti video su Instagram e TikTok, con risultati fino a centinaia di migliaia di visualizzazioni.",
-      "category": "Studio Dentistico",
+      "category": "Odontoiatria",
       "profiles": [
         {
           "url": "https://www.instagram.com/dentistimarrapese/",
@@ -204,7 +198,7 @@
     },
     {
       "name": "Teatro Destino Libero",
-      "description": "dal profilo vuoto a una platea coinvolta in meno di due settimane.",
+      "description": "Video per raccontare spettacoli, persone e attività della compagnia.",
       "category": "Teatro",
       "profiles": [
         {
@@ -242,7 +236,7 @@
     },
     {
       "name": "Sorriso Bistrot",
-      "description": "Un bistrot che si racconta ogni giorno: contenuti food e sala che portano le persone al tavolo.",
+      "description": "Contenuti che mostrano cucina, sala e persone del bistrot.",
       "category": "Ristorazione",
       "profiles": [
         {

@@ -1,0 +1,4 @@
+/* Local copies of the site's Latin font subsets from Google Fonts. */
+@font-face{font-family:'Fredoka';font-style:normal;font-weight:400 700;font-display:swap;src:url('../assets/fonts/fredoka-latin.woff2') format('woff2')}
+@font-face{font-family:'Geist';font-style:normal;font-weight:300 600;font-display:swap;src:url('../assets/fonts/geist-latin.woff2') format('woff2')}
+@font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url('../assets/fonts/geist-mono-latin.woff2') format('woff2')}

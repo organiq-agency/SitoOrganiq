@@ -60,10 +60,10 @@
       hint: 'Il canale principale, quello che porta più lavoro.',
       options: [
         { label: 'Passaparola', pts: 12, tags: ['single-channel'] },
-        { label: 'Google e ricerche online', pts: 10, tags: [] },
+        { label: 'Google e ricerche online', pts: 10, tags: ['search'] },
         { label: 'Già dai social', pts: 8, tags: [] },
         { label: 'Pubblicità a pagamento', pts: 10, tags: ['paid'] },
-        { label: 'Sinceramente? Non lo so', pts: 13, tags: ['single-channel'] }
+        { label: 'Sinceramente? Non lo so', pts: 13, tags: ['unknown-source'] }
       ]
     },
     {
@@ -104,28 +104,31 @@
   var MAX_PTS = QUESTIONS.reduce(function (sum, q) {
     return sum + Math.max.apply(null, q.options.map(function (o) { return o.pts; }));
   }, 0);
+  var MIN_PTS = QUESTIONS.reduce(function (sum, q) {
+    return sum + Math.min.apply(null, q.options.map(function (o) { return o.pts; }));
+  }, 0);
 
   /* ---------- Profili ---------- */
   var PROFILES = {
     fertile: {
-      badge: '🌱 Terreno fertile',
-      title: 'Hai un potenziale enorme, ancora tutto da coltivare.',
-      desc: 'Il tuo business ha le carte in regola per crescere sui social, ma oggi quel potenziale è fermo. Ogni settimana senza una presenza vera è una settimana in cui i tuoi clienti trovano qualcun altro.'
+      badge: '🌱 Da impostare',
+      title: 'C’è una base da costruire.',
+      desc: 'Partirei da un obiettivo preciso, un pubblico e pochi contenuti che riesci a produrre con continuità.'
     },
     stuck: {
-      badge: '🔧 Fai-da-te bloccato',
-      title: 'L’impegno c’è. Quello che manca è il metodo.',
-      desc: 'Stai già investendo tempo ed energie, e questo è il passo più difficile. Ma senza una strategia chiara i contenuti non si trasformano in clienti: serve struttura, non più fatica.'
+      badge: '🔧 Da rivedere',
+      title: 'Stai pubblicando: guardiamo cosa succede.',
+      desc: 'Prima di aumentare la frequenza, guarda gli ultimi 10 contenuti: quali temi hanno generato conversazioni e quali sono passati inosservati?'
     },
     scale: {
-      badge: '🚀 Pronto a scalare',
-      title: 'La base funziona. Ora si può fare sul serio.',
-      desc: 'Hai già una presenza che dà segnali positivi: sei nella situazione perfetta per passare dal "funziona" al "cresce ogni mese". Con una strategia professionale, questi numeri si moltiplicano.'
+      badge: '↗ Già avviato',
+      title: 'Hai già qualcosa che funziona.',
+      desc: 'Individua i contenuti che ricevono risposte utili, poi prova a ripetere quei formati. La crescita non è automatica: va osservata nel tempo.'
     },
     secondary: {
       badge: '🧭 Social di supporto',
-      title: 'Onestamente? I social per te non sono la priorità n°1.',
-      desc: 'Per il tuo tipo di business i social funzionano meglio come vetrina di fiducia che come motore principale di clienti. Ha più senso partire da basi solide — sito, posizionamento, reputazione — e usare i social come supporto. Sì, te lo stiamo dicendo anche se siamo una social agency.'
+      title: 'I social potrebbero non essere la prima priorità.',
+      desc: 'Dalle tue risposte conviene valutare prima come le persone ti trovano oggi e che cosa vedono quando cercano la tua attività. Il sito e la reputazione possono contare più di nuovi video.'
     }
   };
 
@@ -270,14 +273,14 @@
     answers.forEach(function (ai, qi) {
       pts += QUESTIONS[qi].options[ai].pts;
     });
-    return Math.min(100, Math.round((pts / MAX_PTS) * 100));
+    return Math.max(0, Math.min(100, Math.round(((pts - MIN_PTS) / (MAX_PTS - MIN_PTS)) * 100)));
   }
 
   function pickProfile(score, tags) {
     var has = function (t) { return tags.indexOf(t) !== -1; };
-    /* Social secondari: B2B, poco visivo e social mai usati →
-       la priorità onesta è un'altra (sito, posizionamento, reputazione) */
-    if (has('low-visual') && has('linkedin') && has('starter')) return 'secondary';
+    /* Se il contesto è poco visivo e la ricerca o il B2B sono centrali,
+       valutiamo prima i canali già usati dall'attività. */
+    if (!has('advanced') && has('low-visual') && (has('linkedin') || has('search'))) return 'secondary';
     if (has('advanced')) return 'scale';
     if (has('diy') || has('diy-stuck')) return 'stuck';
     return 'fertile';
@@ -291,72 +294,93 @@
     var platforms, platWhy;
     if (has('linkedin')) {
       platforms = 'LinkedIn + Instagram';
-      platWhy = 'Il tuo pubblico decide in ambito professionale: LinkedIn per l’autorevolezza, Instagram per il lato umano del brand.';
+      platWhy = 'Hai indicato professionisti e aziende: valuta LinkedIn prima di aggiungere altri canali. Instagram può mostrare persone, progetti e attività quotidiana.';
     } else if (has('ig-fb')) {
       platforms = 'Instagram + Facebook';
-      platWhy = 'Famiglie e adulti vivono qui: Instagram per farti scoprire, Facebook per la community locale e le recensioni.';
+      platWhy = 'Hai indicato famiglie e adulti: confronta dove si trovano davvero i tuoi clienti prima di scegliere fra Instagram e Facebook.';
     } else {
       platforms = 'Instagram + TikTok';
-      platWhy = 'Il tuo pubblico scopre nuove attività scorrendo i feed: servono formati brevi, nativi e riconoscibili.';
+      platWhy = 'Instagram e TikTok sono due canali da valutare. Per scegliere, guarda dove sono già attivi i tuoi clienti e quanto tempo puoi dedicare ai contenuti.';
     }
     tips.push({
       icon: 'M2 2h20v20H2z M7 7h10 M7 12h10 M7 17h6',
-      title: 'Le tue piattaforme: ' + platforms,
+      title: 'Canali da valutare: ' + platforms,
       text: platWhy
     });
 
     /* 2. Formato contenuti */
     if (has('high-visual')) {
       tips.push({
-        title: 'Il tuo formato: video brevi e foto "vere"',
-        text: 'Vendi con gli occhi: reels e contenuti visivi di qualità sono il tuo asset più potente. È esattamente il tipo di contenuto che genera visite e ordini.'
+        title: 'Mostra ciò che vendi',
+        text: 'Hai detto che l’aspetto visivo conta molto. Prova video brevi e foto che mostrino prodotto, ambiente o lavorazione, poi verifica quali domande arrivano.'
       });
     } else if (has('low-visual')) {
       tips.push({
-        title: 'Il tuo formato: contenuti che dimostrano competenza',
-        text: 'Per chi vende fiducia funzionano consigli pratici, casi risolti e volto in camera: il cliente deve pensare "questa persona sa quello che fa" prima ancora di chiamarti.'
+        title: 'Rispondi alle domande dei clienti',
+        text: 'Hai detto che vendi competenza più che immagini. Parti dalle domande che ricevi più spesso e mostra come lavori, anche senza comparire in video.'
       });
     } else {
       tips.push({
-        title: 'Il tuo formato: storytelling + prova sociale',
-        text: 'Mostra il dietro le quinte, le persone e i risultati: è il mix che trasforma un profilo in un motivo per sceglierti.'
+        title: 'Scegli due o tre temi ricorrenti',
+        text: 'Alterna quello che fai, le persone coinvolte e le domande che ricevi. Dopo qualche settimana controlla quali temi interessano di più.'
       });
     }
 
     /* 3. Terza tip in base al contesto */
-    if (has('single-channel')) {
+    if (profileKey === 'secondary') {
       tips.push({
-        title: 'Attenzione: dipendi da un solo canale',
-        text: 'Oggi i clienti arrivano da una fonte che non controlli. I social sono il modo più rapido per costruire un canale tuo, misurabile e scalabile.'
+        title: 'Prima verifica sito e reputazione',
+        text: 'Dalle tue risposte i clienti potrebbero cercarti altrove. Controlla che trovino servizi, contatti e informazioni aggiornate prima di investire in nuovi contenuti.'
+      });
+    } else if (has('unknown-source')) {
+      tips.push({
+        title: 'Scopri da dove arrivano i contatti',
+        text: 'Hai detto che non sai come ti trovano i nuovi clienti. Chiederlo a ogni nuovo contatto, e annotare la risposta, è il primo passo prima di scegliere altri canali.'
+      });
+    } else if (has('single-channel')) {
+      tips.push({
+        title: 'Oggi ti trovano soprattutto tramite passaparola',
+        text: 'Hai indicato un canale principale. Prima di aprirne altri, chiedi ai nuovi clienti come ti hanno scoperto e annota le risposte.'
       });
     } else if (has('urgency')) {
       tips.push({
-        title: 'I tuoi competitor sono già avanti',
-        text: 'Chi presidia i social nella tua nicchia sta raccogliendo i clienti che cercano proprio quello che fai tu. Il secondo momento migliore per iniziare è adesso.'
+        title: 'Guarda cosa fanno i concorrenti',
+        text: 'Hai notato concorrenti più attivi. Confronta argomenti, frequenza e risposte del pubblico: può aiutarti a scegliere dove essere più chiaro o diverso.'
       });
     } else if (has('opportunity')) {
       tips.push({
-        title: 'Hai un vantaggio raro: i competitor dormono',
-        text: 'Nella tua nicchia c’è spazio libero: chi si muove per primo con contenuti professionali si prende la quota di attenzione più grande, al costo più basso.'
+        title: 'Metti alla prova la tua impressione',
+        text: 'Hai indicato concorrenti meno attivi. Guarda i loro ultimi contenuti e le domande del pubblico prima di decidere che cosa pubblicare.'
       });
     } else if (has('delegate')) {
       tips.push({
-        title: 'Il tuo tempo è la risorsa più scarsa',
-        text: 'Con il tempo che hai, il fai-da-te produce poco e logora molto. La leva giusta è delegare la parte operativa e tenere per te solo ciò che sai fare meglio: il tuo lavoro.'
-      });
-    } else if (profileKey === 'secondary') {
-      tips.push({
-        title: 'Prima il fondamento: sito e reputazione',
-        text: 'Per il tuo business conviene partire da un sito professionale e da una reputazione online solida; i social diventano la conferma di fiducia per chi ti sta già valutando.'
+        title: 'Pianifica per il tempo che hai',
+        text: 'Hai poco tempo per i social: un calendario sostenibile conta più di una frequenza che non puoi mantenere. Decidi quali attività gestire e quali delegare.'
       });
     } else {
       tips.push({
-        title: 'La costanza batte la perfezione',
-        text: 'Meglio 3 contenuti a settimana per 6 mesi che 30 in un mese e poi il silenzio. È la costanza, non il colpo di fortuna, a costruire risultati.'
+        title: 'Inizia da una verifica semplice',
+        text: 'Scegli un obiettivo per il prossimo mese, pubblica con regolarità e annota quali contenuti ottengono risposte utili.'
       });
     }
 
     return tips;
+  }
+
+  function answerSummary() {
+    var current = [
+      'Oggi pubblichi poco o niente.',
+      'Oggi pubblichi quando riesci.',
+      'Pubblichi con costanza, ma i risultati ti sembrano pochi.',
+      'Hai detto che i tuoi social stanno già funzionando.'
+    ];
+    var goals = [
+      'Nei prossimi sei mesi cerchi più clienti.',
+      'Nei prossimi sei mesi vuoi farti conoscere nella tua zona o nicchia.',
+      'Nei prossimi sei mesi vuoi seguire meglio chi già ti conosce.',
+      'Nei prossimi sei mesi vuoi lanciare qualcosa di nuovo.'
+    ];
+    return current[answers[2]] + ' ' + goals[answers[7]] + ' ';
   }
 
   /* ---------- Render risultato ---------- */
@@ -379,7 +403,7 @@
 
     $('profileBadge').textContent = profile.badge;
     $('profileTitle').textContent = profile.title;
-    $('profileDesc').textContent = profile.desc;
+    $('profileDesc').textContent = answerSummary() + profile.desc;
 
     /* Tips */
     var tips = buildTips(tags, profileKey);
@@ -394,10 +418,13 @@
     });
 
     /* CTA personalizzata per il profilo "secondary" */
+    var box = $('leadBox');
     if (profileKey === 'secondary') {
-      var box = $('leadBox');
-      box.querySelector('h3').innerHTML = 'Ti serve prima una base solida? <span class="accent">Partiamo da lì.</span>';
-      box.querySelector('p').textContent = 'Progettiamo anche siti web e piattaforme online. Prenota un’analisi gratuita: ti diciamo da dove ha senso iniziare davvero, senza venderti quello che non ti serve.';
+      box.querySelector('h3').innerHTML = 'Prima dei social, <span class="accent">guardiamo le basi.</span>';
+      box.querySelector('p').textContent = 'Se vuoi, possiamo rivedere insieme sito, informazioni e canali attuali prima di proporti nuovi contenuti.';
+    } else {
+      box.querySelector('h3').innerHTML = 'Hai visto un primo orientamento. <span class="accent">Ora guardiamo il tuo profilo.</span>';
+      box.querySelector('p').textContent = 'Se vuoi un parere sui contenuti che pubblichi oggi, lasciaci i tuoi contatti: esamineremo il profilo e ti diremo da cosa partire.';
     }
 
     /* Campi nascosti per l'email del lead */

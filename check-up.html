@@ -3,19 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Test del Potenziale gratuito — Quanto può crescere la tua attività? | Organiq.</title>
-<meta name="description" content="Test gratuito in 2 minuti: scopri se e come i social possono far crescere la tua attività. Punteggio, profilo e consigli immediati dall'agenzia social Organiq (Roma e tutta Italia).">
-<meta property="og:title" content="Test del Potenziale gratuito — Quanto può crescere la tua attività?">
-<meta property="og:description" content="8 domande, 2 minuti, risultato immediato. E se i social non sono la tua priorità, te lo diciamo onestamente.">
+<title>Check-up social gratuito | Organiq</title>
+<meta name="description" content="Rispondi a 8 domande sui tuoi social. In circa 2 minuti ricevi un primo orientamento basato sulle tue risposte, senza promesse di crescita.">
+<meta property="og:title" content="Check-up social gratuito | Organiq">
+<meta property="og:description" content="8 domande per capire da dove partire con i tuoi canali social.">
 <meta property="og:url" content="https://organiq-agency.github.io/SitoOrganiq/check-up.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <link rel="canonical" href="https://organiq-agency.github.io/SitoOrganiq/check-up.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts-local.css?v=1">
 <link rel="stylesheet" href="css/style.css?v=32ef538737">
 <link rel="stylesheet" href="css/navigation.css?v=2fdafb7749">
 <meta name="theme-color" content="#050506">
@@ -45,9 +43,9 @@
 
   <!-- INTRO (saltata: il quiz parte subito dalla prima domanda) -->
   <div class="quiz-card quiz-fade" id="intro" hidden>
-    <span class="quiz-step-label">Test del Potenziale · Gratuito</span>
-    <h1 class="quiz-q">Scopri se — e come — i social possono far crescere il tuo business.</h1>
-    <p class="quiz-hint" style="margin-bottom:34px">8 domande, circa 2 minuti. Alla fine ricevi subito il tuo punteggio di potenziale, il tuo profilo e i primi consigli concreti. E se i social non sono la tua priorità, te lo diciamo onestamente.</p>
+    <span class="quiz-step-label">Check-up social · Gratuito</span>
+    <h1 class="quiz-q">Da dove cominciare con i tuoi social?</h1>
+    <p class="quiz-hint" style="margin-bottom:34px">8 domande, circa 2 minuti. Ricevi un primo orientamento basato sulle tue risposte. Se i social non sono la tua priorità, te lo diciamo onestamente.</p>
     <button class="btn btn-primary btn-lg" id="startBtn">
       Inizia il test
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -84,12 +82,13 @@
         </svg>
         <div class="gauge-num">
           <strong id="scoreNum">0</strong>
-          <span>Potenziale social</span>
+          <span>Indice orientativo</span>
         </div>
       </div>
       <div class="result-profile" id="profileBadge"></div>
       <h2 id="profileTitle"></h2>
       <p class="lead" id="profileDesc"></p>
+      <p class="quiz-score-note">Questo indice riassume le tue risposte: non è una previsione di crescita o di nuovi clienti.</p>
     </div>
 
     <div class="result-tips">
@@ -98,10 +97,10 @@
     </div>
 
     <div class="lead-box" id="leadBox">
-      <h3>Questo era il test. <span class="accent">Il piano completo è il passo dopo.</span></h3>
-      <p>Prenota un'analisi gratuita e senza impegno: guardiamo insieme la tua situazione reale e ti diciamo esattamente cosa faremmo, con che priorità e che risultati aspettarti.</p>
+      <h3>Hai visto un primo orientamento. <span class="accent">Ora guardiamo il tuo profilo.</span></h3>
+      <p>Se vuoi un parere sui contenuti che pubblichi oggi, lasciaci i tuoi contatti: esamineremo il profilo e ti diremo da cosa partire.</p>
       <form class="form-grid" id="leadForm" action="https://formsubmit.co/organiqsocialagency@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Nuovo lead dal Test del Potenziale — organiq-agency.it">
+        <input type="hidden" name="_subject" value="Nuova richiesta dal check-up social — organiq-agency.it">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://organiq-agency.github.io/SitoOrganiq/grazie.html">
