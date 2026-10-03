@@ -163,16 +163,6 @@ body.site-inner .prose a{color:var(--mint)}
 body.site-inner .card-links a{border-color:var(--line-2);border-radius:6px;color:var(--txt-soft)}
 body.site-inner .card-links a:hover{color:var(--mint);border-color:var(--mint)}
 
-/* Retain the VM English plan architecture while matching the new palette. */
-body.site-inner .packs{--head:'Fredoka',system-ui,sans-serif;--body:'Geist',system-ui,sans-serif;--radius-lg:10px;--lemon:var(--mint);--coral:#a1a1a8}
-body.site-inner .packs .pack{border:1px solid var(--line-2);background:#101012;color:var(--txt);border-radius:10px;box-shadow:none}
-body.site-inner .packs .pack__head{background:#1c1c20;color:var(--txt);border-radius:6px}
-body.site-inner .packs .pack--business{border-color:rgba(24,231,188,.42);background:#141b19}
-body.site-inner .packs .pack--business .pack__head{background:var(--mint);color:#03261d}
-body.site-inner .packs .pack--business .pack__price{color:var(--mint)}
-body.site-inner .packs .pack__flag{border-radius:4px;background:var(--mint);color:#03261d}
-body.site-inner .packs .pack__name{font-weight:500}
-
 /* Quiz and confirmation retain their workflows. */
 body.site-inner.quiz-page .quiz-top{border-bottom:1px solid var(--line)}
 body.site-inner.quiz-page .quiz-progress{background:var(--surface-2)}
@@ -385,9 +375,6 @@ body.site-inner .views-total{background:#101012;border-radius:10px}
 body.site-inner .person-photo img{filter:grayscale(.55) brightness(.88) contrast(1.05)}
 body.site-inner .step-row{padding-block:28px}
 body.site-inner .service-price .service-amount{font-family:var(--font-head);font-weight:500}
-body.site-inner .packs .pack__name,
-body.site-inner .packs .pack__price{font-weight:500}
-body.site-inner .packs .pack__name small{font-family:var(--font-accent);font-weight:400}
 body.site-inner .form-field :is(input,textarea,select){min-height:48px}
 body.site-inner.quiz-page .quiz-top{background:#050506}
 body.site-inner.quiz-page .quiz-main{position:relative;isolation:isolate}
