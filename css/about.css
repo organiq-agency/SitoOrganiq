@@ -1,0 +1,23 @@
+/* Individual profiles and clearly attributed collaborations. */
+.team-profile-nav{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 36px}
+.team-profile-nav a{padding:12px 18px;border:1px solid var(--line-2);border-radius:6px;color:var(--txt);font-size:14px}
+.team-profile-nav a:hover{border-color:var(--mint);color:var(--mint)}
+.team-people.team-profiles{grid-template-columns:1fr;gap:40px}
+.team-profiles .person{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);scroll-margin-top:96px}
+.team-profiles .person:hover{transform:none}
+.team-profiles .person-photo{aspect-ratio:auto;min-height:420px;height:100%}
+.team-profiles .person-body{padding:clamp(26px,4vw,46px)}
+.team-profiles .person-body h3{font-size:clamp(28px,3vw,40px);margin:0 0 10px;line-height:1.12}
+.team-profiles .person-role{color:var(--mint);font-size:13px;margin:0 0 24px}
+.team-profiles .person-work{margin-top:30px;padding-top:24px;border-top:1px solid var(--line-2)}
+.team-profiles .person-work h4{font-size:16px;line-height:1.4;margin:0 0 16px}
+.team-profiles .person-body .person-clients{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.team-profiles .person-body .person-clients li{display:flex;align-items:center;gap:10px;padding:12px;background:#161619;border:1px solid var(--line-2);border-radius:6px;font-size:12px;line-height:1.4}
+.person-clients img{width:32px;height:32px;object-fit:cover;border-radius:50%;flex:none}
+@media(max-width:1000px){.team-profiles .person-body .person-clients{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+  .team-profiles .person{grid-template-columns:1fr}
+  .team-profiles .person-photo{min-height:0;height:auto;aspect-ratio:4/3}
+  .team-profiles .person-body{padding:26px 22px}
+  .team-profiles .person-body .person-clients{grid-template-columns:1fr}
+}
