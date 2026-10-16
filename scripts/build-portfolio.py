@@ -5,21 +5,22 @@ root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'data/portfolio.json').read_text()); esc=lambda x:html.escape(str(x),quote=True)
 def card(c,v=None,i=1):
  if v:
+  title=esc(v.get('title',c['name']))
   if v.get('previewUnavailable'):
    media=f'''<a class="video-pending video-pending--post" href="{esc(v['url'])}" target="_blank" rel="noopener noreferrer" aria-label="Apri il post di {esc(c['name'])} su {v['platform']}"><span class="video-platform">{v['platform']} · Post</span><span class="pending-number" aria-hidden="true">↗</span><span class="video-owner">{esc(c['name'])}</span><span>Apri il post originale</span></a>'''
   else:
-   media=f'''<button class="video-launch" data-embed="{esc(v['embed'])}" aria-label="Riproduci il video di {esc(c['name'])} su {v['platform']}"><img class="video-cover" src="{esc(v['cover'])}" alt="" loading="lazy" decoding="async"><span class="video-platform">{v['platform']}</span><span class="play-symbol" aria-hidden="true">▷</span><span class="video-owner">{esc(c['name'])}</span><span>Riproduci video</span></button>'''
-  bottom=f'<a href="{esc(v["url"])}" target="_blank" rel="noopener noreferrer">Apri su {v["platform"]} ↗</a>'
+   media=f'''<button class="video-launch" data-embed="{esc(v['embed'])}" aria-label="Guarda {title} su {v['platform']}"><img class="video-cover" src="{esc(v['cover'])}" alt="" loading="lazy" decoding="async"><span class="video-platform">{v['platform']}</span><span class="play-symbol" aria-hidden="true">▷</span><span class="video-owner">{esc(c['name'])}</span><span>Guarda qui</span></button>'''
+  bottom=f'<span class="project-context">{title}</span><a href="{esc(v["url"])}" target="_blank" rel="noopener noreferrer">Apri su {v["platform"]} ↗</a>'
  else:
   media=f'<div class="video-pending"><span class="video-platform">IN SELEZIONE</span><span class="pending-number" aria-hidden="true">0{i}</span><span class="video-owner">Video in arrivo</span><span>{esc(c["name"])}</span></div>'
-  bottom='<span>La prossima storia prende forma.</span>'
+  bottom='<span>Nessun altro video disponibile in questa selezione.</span>'
  return f'<article class="portfolio-video"><div class="video-stage">{media}</div><div class="video-meta">{bottom}</div></article>'
 def carousel(cards,id):
  return f'''<div class="video-carousel" role="region" aria-label="Carosello video"><div class="video-track" id="{id}" tabindex="0">{''.join(cards)}</div><div class="video-controls"><span>Scorri per esplorare</span><button data-step="-1" aria-controls="{id}" aria-label="Video precedenti">←</button><button data-step="1" aria-controls="{id}" aria-label="Video successivi">→</button></div></div>'''
-parts=['<section class="section" id="social-video"><div class="container"><div class="section-head"><span class="eyebrow">Le storie dei nostri clienti</span><h2>Scopri i video. <span class="accent-grad">Entra nel progetto.</span></h2><p class="lead">Una selezione di contenuti Instagram e TikTok, cliente per cliente.</p><p class="embed-note">Guarda le anteprime e premi play per caricare il video ufficiale. Puoi anche aprirlo su Instagram o TikTok.</p></div>']
+parts=['<section class="section" id="social-video"><div class="container"><div class="section-head"><span class="eyebrow">Progetti seguiti dai nostri professionisti</span><h2>Video e contenuti <span class="accent-grad">pubblicati.</span></h2><p class="lead">Una selezione di contenuti Instagram e TikTok, organizzata per progetto. Le collaborazioni possono comprendere attività diverse: produzione video, contenuti o gestione dei canali.</p><p class="embed-note">Guarda le anteprime e premi play per caricare il video ufficiale. Puoi anche aprirlo su Instagram o TikTok.</p></div>']
 for n,c in enumerate(data['clients']):
- if c['name']=='Sorriso Bistrot': parts.append('<div class="section-head"><span class="eyebrow">In gestione oggi</span><h2>I nuovi <span class="accent-grad">avvii</span>.</h2></div>')
- links=''.join(f'<a href="{esc(l["url"])}" target="_blank" rel="noopener noreferrer">{esc(l["label"])} ↗</a>' for l in c['profiles'])
+ if c['name']=='Sorriso Bistrot': parts.append('<div class="section-head"><span class="eyebrow">Altri progetti social</span><h2>Attività, scuole <span class="accent-grad">e professionisti.</span></h2></div>')
+ links=''.join(f'<a href="{esc(l["url"])}" target="_blank" rel="noopener noreferrer">Profilo {esc(l["label"])} ↗</a>' for l in c['profiles'])
  cards=[card(c,v) for v in c['videos']]
  while len(cards)<2: cards.append(card(c,i=len(cards)+1))
  parts.append(f'<section class="client-project" aria-labelledby="client-{n}"><div class="client-heading"><span class="project-index">{n+1:02}</span><div><span class="eyebrow">{esc(c["category"])}</span><h3 id="client-{n}">{esc(c["name"])}</h3><p>{esc(c["description"])}</p><div class="card-links">{links}</div></div></div>{carousel(cards,"client-track-"+str(n))}</section>')
@@ -28,12 +29,12 @@ best=sorted([(c,v) for c in data['clients'] for v in c['videos'] if isinstance(v
 cards=[]
 for c,v in best:
  s=card(c,v); views=f'{v["views"]:,}'.replace(',','.')
- s=s.replace('</article>',f'<div class="video-result"><strong>{views}</strong><span>visualizzazioni indicate da Organiq · apri il video</span></div></article>'); cards.append(s)
-parts.append(f'<section class="section" id="video-risultati"><div class="container"><div class="section-head"><span class="eyebrow">I migliori risultati</span><h2>Storie che hanno <span class="accent-grad">viaggiato lontano.</span></h2><p class="lead">Visualizzazioni aggiornate manualmente, non in tempo reale.</p></div>{carousel(cards,"best-video-track")}</div></section>')
+ s=s.replace('</article>',f'<div class="video-result"><strong>{views}</strong><span>visualizzazioni di riferimento · apri il video</span></div></article>'); cards.append(s)
+parts.append(f'<section class="section" id="video-risultati"><div class="container"><div class="section-head"><span class="eyebrow">I migliori risultati</span><h2>I sei video <span class="accent-grad">più visti.</span></h2><p class="lead">Conteggi di riferimento forniti per il portfolio, aggiornati manualmente. Per il dato attuale apri il contenuto originale.</p></div>{carousel(cards,"best-video-track")}</div></section>')
 total=sum(v['views'] for c,v in best)
 base=f'{total:,}'.replace(',','.')
 count_label='Sei' if len(best)==6 else str(len(best))
-parts.append(f'''<section class="section"><div class="container"><div class="views-total"><span class="eyebrow">I video in evidenza</span><h2>{count_label} video, un totale<br>da esplorare.</h2><div class="views-number">{base}</div><p>Visualizzazioni complessive dei {len(best)} video qui sopra</p><p class="counter-note">Somma dei dati indicati per ogni video, aggiornata manualmente. Apri i contenuti per vedere i risultati sui rispettivi profili.</p></div></div></section>''')
+parts.append(f'''<section class="section"><div class="container"><div class="views-total"><span class="eyebrow">I video in evidenza</span><h2>Le visualizzazioni<br>dei {len(best)} video selezionati.</h2><div class="views-number">{base}</div><p>Visualizzazioni complessive dei {len(best)} video qui sopra</p><p class="counter-note">Somma dei dati indicati per ogni video, aggiornata manualmente. Apri i contenuti per vedere i risultati sui rispettivi profili.</p></div></div></section>''')
 page=root/'portfolio.html'; src=page.read_text(); content='\n'.join(parts)
 if '<!-- VIDEO PORTFOLIO START -->' in src:
  src=re.sub(r'<!-- VIDEO PORTFOLIO START -->.*?<!-- VIDEO PORTFOLIO END -->',lambda _: '<!-- VIDEO PORTFOLIO START -->\n'+content+'\n<!-- VIDEO PORTFOLIO END -->',src,flags=re.S)

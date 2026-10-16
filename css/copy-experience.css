@@ -1,0 +1,27 @@
+/* Supporting copy, request feedback and quiz summaries. */
+.offer-details{margin-top:24px;padding:24px;border:1px solid #ffffff26;border-radius:12px;background:#101012;color:#d5d5dc;font-size:14px;line-height:1.7}
+.offer-details summary{font-weight:500;color:#f4f4f5;cursor:pointer;min-height:28px}
+.offer-details p{margin-top:14px;max-width:84ch}
+.offer-details ul{list-style:disc;padding-left:20px;margin-top:12px}
+.offer-details li+li{margin-top:8px}
+.project-context{margin-top:14px;font-size:13px;color:#a1a1a8;line-height:1.65}
+.form-feedback{grid-column:1/-1;padding:16px;border:1px solid #18e7bc55;background:#18e7bc0d;border-radius:8px;font-size:14px;line-height:1.65;overflow-wrap:anywhere}
+.form-feedback.is-error{border-color:#cf9e6c;background:#cf9e6c14;color:#f1d4b5}
+.form-feedback a{text-decoration:underline;text-underline-offset:3px}
+.tip-label{display:block;text-transform:uppercase;letter-spacing:.07em;font-size:11px;color:#18e7bc;margin-bottom:10px}
+.result-save{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+.result-save>p,.result-save>textarea{width:100%;font-size:13px;line-height:1.6}
+.result-save textarea{min-height:220px;padding:16px;background:#101012;color:#f4f4f5;border:1px solid #ffffff40;border-radius:8px}
+.answer-summary{padding:20px;border:1px solid #ffffff26;border-radius:10px;margin-bottom:32px}
+.answer-summary summary{cursor:pointer;color:#18e7bc;font-size:14px}
+.answer-summary ol{padding:18px 0 0 20px;list-style:decimal}
+.answer-summary li{font-size:13px;line-height:1.6;margin-bottom:14px}
+.answer-summary strong,.answer-summary span{display:block}
+.answer-summary span{color:#c4c4ce}
+.plan .plan-sub{min-height:2.8em}
+@media(max-width:640px){.offer-details{padding:18px}.result-save .btn{width:100%}}
+/* Keep both names readable where the two team portraits overlap. */
+@media(max-width:640px){
+ body.site-inner .people-art .art-frame--two figcaption{text-align:right;padding-left:30px}
+ body.site-inner .people-art .art-frame--two figcaption strong{font-size:15px}
+}

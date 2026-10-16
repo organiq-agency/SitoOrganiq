@@ -2,7 +2,7 @@
   "clients": [
     {
       "name": "Leone Master School",
-      "description": "Formazione, eventi e persone: contenuti che raccontano la scuola e la sua community.",
+      "description": "Video e un post selezionati dal profilo della scuola. Apri i contenuti per vedere come vengono raccontati formazione, eventi e persone.",
       "category": "Formazione",
       "profiles": [
         {
@@ -15,20 +15,22 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DD7fI5fIUW8/",
           "embed": "https://www.instagram.com/reel/DD7fI5fIUW8/embed/",
-          "cover": "assets/video-covers/DD7fI5fIUW8.webp"
+          "cover": "assets/video-covers/DD7fI5fIUW8.webp",
+          "title": "Video 1 · Leone Master School"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/p/DCrmYjoo_DD/",
           "embed": "https://www.instagram.com/p/DCrmYjoo_DD/embed/",
-          "previewUnavailable": true
+          "previewUnavailable": true,
+          "title": "Post 2 · Leone Master School"
         }
       ]
     },
     {
       "name": "Leonardo Leone",
-      "description": "Contenuti video per raccontare il lavoro di un imprenditore. Due reel hanno superato 2 e 1,3 milioni di visualizzazioni.",
-      "category": "Personal Brand",
+      "description": "Due reel per il profilo di Leonardo Leone, con conteggi di riferimento di 2 e 1,3 milioni di visualizzazioni. I collegamenti portano ai contenuti originali.",
+      "category": "Personal brand",
       "profiles": [
         {
           "url": "https://www.instagram.com/leonardo_leone_official",
@@ -41,20 +43,22 @@
           "url": "https://www.instagram.com/reel/DHbcJxiss21/",
           "embed": "https://www.instagram.com/reel/DHbcJxiss21/embed/",
           "views": 2000000,
-          "cover": "assets/video-covers/DHbcJxiss21.webp"
+          "cover": "assets/video-covers/DHbcJxiss21.webp",
+          "title": "Video 1 · Leonardo Leone"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DEu5XOmoPuT/",
           "embed": "https://www.instagram.com/reel/DEu5XOmoPuT/embed/",
           "views": 1300000,
-          "cover": "assets/video-covers/DEu5XOmoPuT.webp"
+          "cover": "assets/video-covers/DEu5XOmoPuT.webp",
+          "title": "Video 2 · Leonardo Leone"
         }
       ]
     },
     {
       "name": "Io Creo Il Mio Destino",
-      "description": "Contenuti dedicati alla community di un percorso formativo.",
+      "description": "Due video dedicati alla community e alle attività del percorso formativo, consultabili sul profilo originale.",
       "category": "Eventi e community",
       "profiles": [
         {
@@ -67,19 +71,21 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DFf2GA4oWrD/",
           "embed": "https://www.instagram.com/reel/DFf2GA4oWrD/embed/",
-          "cover": "assets/video-covers/DFf2GA4oWrD.webp"
+          "cover": "assets/video-covers/DFf2GA4oWrD.webp",
+          "title": "Video 1 · Io Creo Il Mio Destino"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DFnyNDdsWCD/",
           "embed": "https://www.instagram.com/reel/DFnyNDdsWCD/embed/",
-          "cover": "assets/video-covers/DFnyNDdsWCD.webp"
+          "cover": "assets/video-covers/DFnyNDdsWCD.webp",
+          "title": "Video 2 · Io Creo Il Mio Destino"
         }
       ]
     },
     {
       "name": "Cosplus3D",
-      "description": "Maschere progettate per artisti e raccontate attraverso video e immagini.",
+      "description": "Contenuti dedicati alle maschere e ai prodotti di Cosplus3D. Il primo video in evidenza ha un conteggio di riferimento di 1,7 milioni di visualizzazioni.",
       "category": "Design e stampa 3D",
       "profiles": [
         {
@@ -93,19 +99,21 @@
           "url": "https://www.instagram.com/reel/DKxv5vgKjYi/",
           "embed": "https://www.instagram.com/reel/DKxv5vgKjYi/embed/",
           "views": 1700000,
-          "cover": "assets/video-covers/DKxv5vgKjYi.webp"
+          "cover": "assets/video-covers/DKxv5vgKjYi.webp",
+          "title": "Video 1 · Cosplus3D"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DPQqmUtDONk/",
           "embed": "https://www.instagram.com/reel/DPQqmUtDONk/embed/",
-          "cover": "assets/video-covers/DPQqmUtDONk.webp"
+          "cover": "assets/video-covers/DPQqmUtDONk.webp",
+          "title": "Video 2 · Cosplus3D"
         }
       ]
     },
     {
-      "name": "Crybaby.ely",
-      "description": "Contenuti per il profilo di una performer e cosplayer.",
+      "name": "Crybaby",
+      "description": "Video selezionati dal profilo di Crybaby, performer e cosplayer. Qui puoi esplorare due contenuti pubblicati su Instagram.",
       "category": "Artista e performer",
       "profiles": [
         {
@@ -118,19 +126,21 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DDaKOmeIjTa/",
           "embed": "https://www.instagram.com/reel/DDaKOmeIjTa/embed/",
-          "cover": "assets/video-covers/DDaKOmeIjTa.webp"
+          "cover": "assets/video-covers/DDaKOmeIjTa.webp",
+          "title": "Video 1 · Crybaby"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DMQYWoTIDLP/",
           "embed": "https://www.instagram.com/reel/DMQYWoTIDLP/embed/",
-          "cover": "assets/video-covers/DMQYWoTIDLP.webp"
+          "cover": "assets/video-covers/DMQYWoTIDLP.webp",
+          "title": "Video 2 · Crybaby"
         }
       ]
     },
     {
       "name": "Out Of Mana",
-      "description": "Collettivo di creator: reel organici, tra cui un video da 7,1 milioni di visualizzazioni.",
+      "description": "Contenuti per un collettivo di creator nel mondo gaming. La selezione comprende un reel con un conteggio di riferimento di 7,1 milioni di visualizzazioni.",
       "category": "Gaming e creator",
       "profiles": [
         {
@@ -144,19 +154,21 @@
           "url": "https://www.instagram.com/reel/DF-n12pCGn6/",
           "embed": "https://www.instagram.com/reel/DF-n12pCGn6/embed/",
           "views": 7100000,
-          "cover": "assets/video-covers/DF-n12pCGn6.webp"
+          "cover": "assets/video-covers/DF-n12pCGn6.webp",
+          "title": "Video 1 · Out Of Mana"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DGgX3xwCIhi/",
           "embed": "https://www.instagram.com/reel/DGgX3xwCIhi/embed/",
-          "cover": "assets/video-covers/DGgX3xwCIhi.webp"
+          "cover": "assets/video-covers/DGgX3xwCIhi.webp",
+          "title": "Video 2 · Out Of Mana"
         }
       ]
     },
     {
       "name": "Dentisti Marrapese",
-      "description": "Profilo avviato da zero: contenuti video su Instagram e TikTok, con risultati fino a centinaia di migliaia di visualizzazioni.",
+      "description": "Una selezione di contenuti Instagram e TikTok dello studio. Il video TikTok in evidenza ha un conteggio di riferimento di 700 mila visualizzazioni.",
       "category": "Odontoiatria",
       "profiles": [
         {
@@ -174,31 +186,35 @@
           "url": "https://www.tiktok.com/@dentisti.marrapese/video/7600107392906333462",
           "embed": "https://www.tiktok.com/player/v1/7600107392906333462",
           "views": 700000,
-          "cover": "assets/video-covers/7600107392906333462.webp"
+          "cover": "assets/video-covers/7600107392906333462.webp",
+          "title": "Video 1 · Dentisti Marrapese"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DU5g6MOAkhw/",
           "embed": "https://www.instagram.com/reel/DU5g6MOAkhw/embed/",
-          "cover": "assets/video-covers/DU5g6MOAkhw.webp"
+          "cover": "assets/video-covers/DU5g6MOAkhw.webp",
+          "title": "Video 2 · Dentisti Marrapese"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DTu-15UAhRc/",
           "embed": "https://www.instagram.com/reel/DTu-15UAhRc/embed/",
-          "cover": "assets/video-covers/DTu-15UAhRc.webp"
+          "cover": "assets/video-covers/DTu-15UAhRc.webp",
+          "title": "Video 3 · Dentisti Marrapese"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DYe27PhCKTR/",
           "embed": "https://www.instagram.com/reel/DYe27PhCKTR/embed/",
-          "cover": "assets/video-covers/DYe27PhCKTR.webp"
+          "cover": "assets/video-covers/DYe27PhCKTR.webp",
+          "title": "Video 4 · Dentisti Marrapese"
         }
       ]
     },
     {
       "name": "Teatro Destino Libero",
-      "description": "Video per raccontare spettacoli, persone e attività della compagnia.",
+      "description": "Video dedicati agli spettacoli e alle persone della compagnia teatrale. La selezione raccoglie contenuti Instagram e TikTok.",
       "category": "Teatro",
       "profiles": [
         {
@@ -212,31 +228,35 @@
           "url": "https://www.instagram.com/reel/DQAp6mhiHXc/",
           "embed": "https://www.instagram.com/reel/DQAp6mhiHXc/embed/",
           "views": 400000,
-          "cover": "assets/video-covers/DQAp6mhiHXc.webp"
+          "cover": "assets/video-covers/DQAp6mhiHXc.webp",
+          "title": "Video 1 · Teatro Destino Libero"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DQQtyKFDA3o/",
           "embed": "https://www.instagram.com/reel/DQQtyKFDA3o/embed/",
-          "cover": "assets/video-covers/DQQtyKFDA3o.webp"
+          "cover": "assets/video-covers/DQQtyKFDA3o.webp",
+          "title": "Video 2 · Teatro Destino Libero"
         },
         {
           "platform": "TikTok",
           "url": "https://www.tiktok.com/@teatro.destino.libero/video/7560409970773134614",
           "embed": "https://www.tiktok.com/player/v1/7560409970773134614",
-          "cover": "assets/video-covers/7560409970773134614.webp"
+          "cover": "assets/video-covers/7560409970773134614.webp",
+          "title": "Video 3 · Teatro Destino Libero"
         },
         {
           "platform": "TikTok",
           "url": "https://www.tiktok.com/@teatro.destino.libero/video/7581150096260173078",
           "embed": "https://www.tiktok.com/player/v1/7581150096260173078",
-          "cover": "assets/video-covers/7581150096260173078.webp"
+          "cover": "assets/video-covers/7581150096260173078.webp",
+          "title": "Video 4 · Teatro Destino Libero"
         }
       ]
     },
     {
       "name": "Sorriso Bistrot",
-      "description": "Contenuti che mostrano cucina, sala e persone del bistrot.",
+      "description": "Video dedicati a cucina, locale e persone di Sorriso Bistrot. I collegamenti aprono i reel pubblicati dal bistrot.",
       "category": "Ristorazione",
       "profiles": [
         {
@@ -249,19 +269,21 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DavqksUMr1O/",
           "embed": "https://www.instagram.com/reel/DavqksUMr1O/embed/",
-          "cover": "assets/video-covers/DavqksUMr1O.webp"
+          "cover": "assets/video-covers/DavqksUMr1O.webp",
+          "title": "Video 1 · Sorriso Bistrot"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DZ7megEsALJ/",
           "embed": "https://www.instagram.com/reel/DZ7megEsALJ/embed/",
-          "cover": "assets/video-covers/DZ7megEsALJ.webp"
+          "cover": "assets/video-covers/DZ7megEsALJ.webp",
+          "title": "Video 2 · Sorriso Bistrot"
         }
       ]
     },
     {
       "name": "LT Motori",
-      "description": "Concessionaria a Roma: una nuova identità e contenuti video dedicati al mondo auto.",
+      "description": "Il passaggio da SP Motors a LT Motori comprende una nuova identità visiva, raccolta nel brandbook, e contenuti video pubblicati sul profilo.",
       "category": "Automotive",
       "profiles": [
         {
@@ -274,20 +296,22 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DbdI-WTtzUB/",
           "embed": "https://www.instagram.com/reel/DbdI-WTtzUB/embed/",
-          "cover": "assets/video-covers/DbdI-WTtzUB.webp"
+          "cover": "assets/video-covers/DbdI-WTtzUB.webp",
+          "title": "Video 1 · LT Motori"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DctJtGRNWuD/",
           "embed": "https://www.instagram.com/reel/DctJtGRNWuD/embed/",
-          "cover": "assets/video-covers/DctJtGRNWuD.webp"
+          "cover": "assets/video-covers/DctJtGRNWuD.webp",
+          "title": "Video 2 · LT Motori"
         }
       ]
     },
     {
-      "name": "La Compagnia Degli Anelli",
-      "description": "La voce è il prodotto: contenuti che fanno sentire — letteralmente — la qualità della scuola.",
-      "category": "Scuola di Doppiaggio",
+      "name": "La Compagnia degli Anelli",
+      "description": "Video per presentare la scuola di doppiaggio e le sue attività, attraverso contenuti Instagram e TikTok.",
+      "category": "Scuola di doppiaggio",
       "profiles": [
         {
           "url": "https://www.instagram.com/scuola.doppiaggio.anelli",
@@ -303,20 +327,22 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DYeT8tdNODL/",
           "embed": "https://www.instagram.com/reel/DYeT8tdNODL/embed/",
-          "cover": "assets/video-covers/DYeT8tdNODL.webp"
+          "cover": "assets/video-covers/DYeT8tdNODL.webp",
+          "title": "Video 1 · La Compagnia degli Anelli"
         },
         {
           "platform": "TikTok",
           "url": "https://www.tiktok.com/@scuola.doppiaggio.anelli/video/7632428891730201859",
           "embed": "https://www.tiktok.com/player/v1/7632428891730201859",
-          "cover": "assets/video-covers/7632428891730201859.webp"
+          "cover": "assets/video-covers/7632428891730201859.webp",
+          "title": "Video 2 · La Compagnia degli Anelli"
         }
       ]
     },
     {
       "name": "Luca Monti — Ironman",
-      "description": "La disciplina di un atleta Ironman raccontata giorno per giorno: un personal brand che ispira e aggrega.",
-      "category": "Personal Brand · Atleta",
+      "description": "Contenuti dedicati al percorso di Luca Monti, atleta Ironman. Qui trovi due video selezionati dal suo profilo Instagram.",
+      "category": "Personal brand · Atleta",
       "profiles": [
         {
           "url": "https://www.instagram.com/lucamonti_ironman/",
@@ -328,15 +354,18 @@
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DaDmB3EqN_y/",
           "embed": "https://www.instagram.com/reel/DaDmB3EqN_y/embed/",
-          "cover": "assets/video-covers/DaDmB3EqN_y.webp"
+          "cover": "assets/video-covers/DaDmB3EqN_y.webp",
+          "title": "Video 1 · Luca Monti — Ironman"
         },
         {
           "platform": "Instagram",
           "url": "https://www.instagram.com/reel/DX1ctPkKWZD/",
           "embed": "https://www.instagram.com/reel/DX1ctPkKWZD/embed/",
-          "cover": "assets/video-covers/DX1ctPkKWZD.webp"
+          "cover": "assets/video-covers/DX1ctPkKWZD.webp",
+          "title": "Video 2 · Luca Monti — Ironman"
         }
       ]
     }
-  ]
+  ],
+  "viewsAsOf": null
 }

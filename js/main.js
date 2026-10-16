@@ -87,5 +87,12 @@
   if (!field || field.value) return;
   const params = new URLSearchParams(location.search);
   const service = params.get('servizio');
-  if (service) field.value = (params.get('messaggio') || 'Vorrei maggiori informazioni su: ' + service).slice(0,4000);
+  if (service) {
+    field.value = (params.get('messaggio') || 'Vorrei una proposta per: ' + service).slice(0,4000);
+    const heading=document.querySelector('form#contactForm')?.previousElementSibling;
+    if (heading) heading.textContent='Hai selezionato: '+service+'. Aggiungi qualche dettaglio su attività, tempi e materiali disponibili.';
+    if (/Landing|Sito web|Piattaforma|Software/.test(service)) field.placeholder='Quali pagine o funzioni ti servono? Hai già testi, immagini e un dominio?';
+    else if (/Podcast/.test(service)) field.placeholder='Tema, numero di partecipanti, durata e servizi di produzione che cerchi.';
+    else if (/Gestione social/.test(service)) field.placeholder='Quali canali usi oggi? Dove si trova l’attività e quali contenuti puoi girare?';
+  }
 })();
