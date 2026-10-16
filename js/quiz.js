@@ -424,7 +424,7 @@
       box.querySelector('p').textContent = 'Se vuoi, possiamo rivedere insieme sito, informazioni e canali attuali prima di proporti nuovi contenuti.';
     } else {
       box.querySelector('h3').innerHTML = 'Hai visto un primo orientamento. <span class="accent">Ora guardiamo il tuo profilo.</span>';
-      box.querySelector('p').textContent = 'Se vuoi un parere sui contenuti che pubblichi oggi, lasciaci i tuoi contatti: esamineremo il profilo e ti diremo da cosa partire.';
+      box.querySelector('p').textContent = 'Il risultato del test è già qui sopra. Se vuoi anche il parere del nostro team sui tuoi contenuti, puoi richiedere un’analisi gratuita del profilo.';
     }
 
     /* Campi nascosti per l'email del lead */

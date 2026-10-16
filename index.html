@@ -58,6 +58,7 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 <link rel="stylesheet" href="css/fonts-local.css?v=1">
 <link rel="stylesheet" href="nuova-home/css/home.css?v=8">
 <link rel="stylesheet" href="css/mobile-menu.css?v=1">
+<link rel="stylesheet" href="css/checkup-offer.css?v=1">
 </head>
 <body class="home-page">
 
@@ -89,13 +90,13 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
       <span>Organiq<em>.</em></span>
     </a>
     <nav class="nav-links" aria-label="Navigazione principale">
-      <a href="servizi.html">Servizi</a>
+      <a href="servizi.html">Prezzi e Servizi</a>
       <div class="project-menu"><div class="project-menu-top"><a href="portfolio.html">Progetti</a><button class="project-toggle" aria-label="Apri categorie progetti" aria-expanded="false" aria-controls="project-dropdown">⌄</button></div><div class="project-dropdown" id="project-dropdown" hidden><a href="portfolio.html#social-video">Social e video</a><a href="portfolio.html#brand-design">Identità visiva</a><a href="portfolio.html#landing-realizzate">Siti web</a></div></div>
       <a href="chi-siamo.html">Chi siamo</a>
       <a href="contatti.html">Contatti</a>
     </nav>
     <a href="check-up.html" class="btn btn--mint btn--sm nav-cta">
-      <span class="btn-roll"><span>Fai il check-up</span><span aria-hidden="true">Fai il check-up</span></span>
+      <span class="btn-roll"><span>Inizia il check-up</span><span aria-hidden="true">Inizia il check-up</span></span>
     </a>
     <button class="nav-burger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Apri menu"><span></span><span></span></button>
   </div>
@@ -104,13 +105,13 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
 <div class="mmenu" id="mobileMenu" hidden>
   <nav aria-label="Menu mobile">
     <a href="index.html" aria-current="page">Home</a>
-    <a href="servizi.html">Servizi</a>
+    <a href="servizi.html">Prezzi e Servizi</a>
     <details class="mobile-projects"><summary>Progetti</summary><a href="portfolio.html">Tutti i progetti</a><a href="portfolio.html#social-video">Social e video</a><a href="portfolio.html#brand-design">Identità visiva</a><a href="portfolio.html#landing-realizzate">Siti web</a></details>
     <a href="chi-siamo.html">Chi siamo</a>
     <a href="contatti.html">Contatti</a>
   </nav>
   <a href="check-up.html" class="btn btn--mint btn--lg">
-    <span class="btn-roll"><span>Fai il check-up</span><span aria-hidden="true">Fai il check-up</span></span>
+    <span class="btn-roll"><span>Inizia il check-up</span><span aria-hidden="true">Inizia il check-up</span></span>
     <svg class="btn-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
   </a>
 </div>
@@ -143,12 +144,14 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
       <aside class="hero-card" data-hero>
         <div class="hero-card-media hero-mascot"><img src="nuova-home/media/mascotte.webp" alt="" width="598" height="640"></div>
         <div class="hero-card-body">
-          <strong>Check-up gratuito</strong>
-          <span class="mono dim">2 minuti · risultato immediato</span>
+          <strong>Trova il tuo prossimo passo</strong>
+          <p class="checkup-card-copy">Canali, contenuti e priorità per i tuoi social.</p>
+          <span class="mono dim">8 domande · 2 minuti · gratis</span>
           <a href="check-up.html" class="btn btn--light btn--xs">
-            <span class="btn-roll"><span>Fai il check-up</span><span aria-hidden="true">Fai il check-up</span></span>
+            <span class="btn-roll"><span>Inizia il check-up</span><span aria-hidden="true">Inizia il check-up</span></span>
             <svg class="btn-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
           </a>
+          <span class="checkup-card-note">Risultato subito, senza email.</span>
         </div>
       </aside>
     </div>
@@ -628,12 +631,19 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
   <div class="cta-scrim" aria-hidden="true"></div>
   <div class="container cta-content">
     <span class="label mono" data-scramble>Inizia da qui</span>
-    <h2 id="cta-title" data-reveal>Da dove cominciare<br>con i tuoi social?</h2>
-    <p class="sub" data-reveal>8 domande, circa 2 minuti. Ricevi una prima indicazione sui tuoi canali e su cosa guardare per primo. Se i social non sono la tua priorità, te lo diciamo onestamente.</p>
+    <h2 id="cta-title" data-reveal>Su quali social puntare?<br>E cosa pubblicare?</h2>
+    <p class="sub" data-reveal>Rispondi a 8 domande sulla tua attività. In circa 2 minuti ricevi tre indicazioni basate sulle tue risposte, per scegliere da dove cominciare.</p>
+    <ul class="checkup-benefits" aria-label="Cosa ricevi dal check-up" data-reveal>
+      <li><span aria-hidden="true">01</span> Canali da valutare</li>
+      <li><span aria-hidden="true">02</span> Contenuti da provare</li>
+      <li><span aria-hidden="true">03</span> Un primo passo concreto</li>
+    </ul>
     <a href="check-up.html" class="btn btn--mint btn--lg" data-reveal>
-      <span class="btn-roll"><span>Fai il check-up</span><span aria-hidden="true">Fai il check-up</span></span>
+      <span class="btn-roll"><span>Inizia il check-up</span><span aria-hidden="true">Inizia il check-up</span></span>
       <svg class="btn-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg>
     </a>
+    <p class="checkup-reassurance" data-reveal>Gratuito. Risultato subito, senza email.</p>
+    <p class="checkup-context" data-reveal>Se i social non sono la tua priorità, te lo diciamo onestamente. Il risultato è un orientamento automatico; puoi poi richiedere un’analisi del profilo al nostro team.</p>
   </div>
 </section>
 
@@ -652,7 +662,7 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
     <nav class="footer-col" aria-label="Navigazione footer">
       <span class="mono dim">Navigazione</span>
       <a href="index.html">Home</a>
-      <a href="servizi.html">Servizi</a>
+      <a href="servizi.html">Prezzi e Servizi</a>
       <a href="podcast.html">Podcast</a>
       <a href="portfolio.html">Progetti</a>
       <a href="chi-siamo.html">Chi siamo</a>
@@ -665,7 +675,7 @@ setTimeout(function(){if(!window.__oqReady){r.classList.remove('js','intro-on')}
       <span class="mono dim">Dove siamo</span>
       <p>Base a Roma, clienti in tutta Italia</p>
       <span class="mono dim">Check-up gratuito</span>
-      <a class="link-arrow" href="check-up.html">Fai il check-up <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a>
+      <a class="link-arrow" href="check-up.html">Inizia il check-up <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a>
     </div>
   </div>
   <div class="container footer-bottom mono dim">

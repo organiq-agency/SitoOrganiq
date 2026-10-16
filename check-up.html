@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Check-up social gratuito | Organiq</title>
-<meta name="description" content="Rispondi a 8 domande sui tuoi social. In circa 2 minuti ricevi un primo orientamento basato sulle tue risposte, senza promesse di crescita.">
+<meta name="description" content="In 2 minuti scopri canali da valutare, contenuti da provare e un primo passo per i tuoi social. 8 domande, risultato gratuito e senza email.">
 <meta property="og:title" content="Check-up social gratuito | Organiq">
-<meta property="og:description" content="8 domande per capire da dove partire con i tuoi canali social.">
+<meta property="og:description" content="Canali, contenuti e un primo passo per i tuoi social. 8 domande, circa 2 minuti. Risultato gratuito e senza email.">
 <meta property="og:url" content="https://organiq-agency.it/check-up.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="css/navigation.css?v=4">
 <meta name="theme-color" content="#050506">
 <link rel="stylesheet" href="css/site-theme.css?v=2">
+<link rel="stylesheet" href="css/checkup-offer.css?v=1">
 </head>
 <body class="quiz-page site-inner">
 
@@ -55,6 +56,11 @@
 
   <!-- DOMANDE (renderizzate da JS) -->
   <div class="quiz-card" id="quizBox" hidden>
+    <div class="quiz-offer">
+      <h1>Il tuo prossimo passo sui social.</h1>
+      <p>Canali da valutare, contenuti da provare e una prima priorità, in base alle tue risposte.</p>
+      <span>8 domande · Circa 2 minuti · Risultato gratuito, senza email</span>
+    </div>
     <span class="quiz-step-label" id="stepLabel">Domanda 1 di 8</span>
     <h2 class="quiz-q" id="questionText"></h2>
     <p class="quiz-hint" id="questionHint"></p>
@@ -98,7 +104,7 @@
 
     <div class="lead-box" id="leadBox">
       <h3>Hai visto un primo orientamento. <span class="accent">Ora guardiamo il tuo profilo.</span></h3>
-      <p>Se vuoi un parere sui contenuti che pubblichi oggi, lasciaci i tuoi contatti: esamineremo il profilo e ti diremo da cosa partire.</p>
+      <p>Il risultato del test è già qui sopra. Se vuoi anche il parere del nostro team sui tuoi contenuti, puoi richiedere un’analisi gratuita del profilo.</p>
       <form class="form-grid" id="leadForm" action="https://formsubmit.co/organiqsocialagency@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nuova richiesta dal check-up social — organiq-agency.it">
         <input type="hidden" name="_template" value="table">
@@ -123,9 +129,13 @@
           <label for="fPhone">Telefono <span style="color:var(--text-faint);font-weight:400">(opzionale)</span></label>
           <input type="tel" id="fPhone" name="Telefono" autocomplete="tel" placeholder="+39 …">
         </div>
+        <div class="form-field">
+          <label for="fSocial">Link al profilo <span style="color:var(--text-faint);font-weight:400">(opzionale)</span></label>
+          <input type="url" id="fSocial" name="Profilo social" placeholder="https://www.instagram.com/iltuoprofilo" inputmode="url">
+        </div>
         <p class="form-note">Inviando accetti la nostra <a href="privacy.html">privacy policy</a>. Nessuna newsletter, nessuno spam: ti contattiamo solo per l'analisi.</p>
         <button type="submit" class="btn btn-primary btn-lg" id="leadSubmit">
-          Prenota l'analisi gratuita
+          Richiedi l'analisi gratuita
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </form>
@@ -141,7 +151,7 @@
 
 </main>
 
-<script src="js/quiz.js?v=cc91108681"></script>
+<script src="js/quiz.js?v=checkup2"></script>
 <script src="js/navigation.js?v=3" defer></script>
 </body>
 </html>
