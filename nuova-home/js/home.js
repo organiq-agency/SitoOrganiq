@@ -168,6 +168,23 @@
     if (hv) { try { hv.currentTime = 0; var pp = hv.play(); if (pp && pp.catch) pp.catch(function () {}); } catch (e) {} }
     heroIn();
     if (hasST) ScrollTrigger.refresh();
+    // Intro and pinned sections can shift a browser's initial fragment position.
+    if (location.hash) {
+      var fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+      fontsReady.then(function () {
+        requestAnimationFrame(function () {
+          var id;
+          try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+          var target = document.getElementById(id);
+          if (!target) return;
+          if (hasST) ScrollTrigger.refresh();
+          var header = document.getElementById('nav');
+          var offset = (header ? header.getBoundingClientRect().height : 68) + 16;
+          if (lenis) lenis.scrollTo(target, { immediate: true, force: true, offset: -offset });
+          else window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'instant'});
+        });
+      });
+    }
   }
 
   /* Preloader: il logo Organiq si costruisce (anello, ali, becco, scritta) mentre carica il video */

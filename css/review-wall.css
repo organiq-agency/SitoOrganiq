@@ -52,4 +52,5 @@
  .review-group[aria-hidden="true"]{display:none}
  .review-card{width:auto;transform:none!important;transition:none}
  .review-pause,.review-mobile-hint{display:none}
+ .review-track{animation:none!important;will-change:auto}
 }
