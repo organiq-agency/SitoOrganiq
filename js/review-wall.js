@@ -4,7 +4,6 @@
   const wall=section.querySelector('.review-wall');
   const plane=section.querySelector('.review-plane');
   const cards=[...plane.querySelectorAll('.review-card')];
-  const pause=section.querySelector('.review-pause');
   const allButton=section.querySelector('.review-all');
   const dialog=section.querySelector('dialog');
   const dialogTitle=dialog.querySelector('h3');
@@ -41,10 +40,6 @@
   allButton.addEventListener('click',()=>openReviews([...records.keys()],allButton));
   close.addEventListener('click',()=>dialog.close());
   dialog.addEventListener('close',()=>{wall.classList.remove('is-dialog-open');lastTrigger?.focus({preventScroll:true});});
-  pause.addEventListener('click',()=>{
-    const paused=wall.classList.toggle('is-paused');pause.setAttribute('aria-pressed',String(paused));
-    pause.textContent=paused?'Riprendi il wall':'Metti in pausa il wall';
-  });
   wall.addEventListener('pointermove',event=>{
     if(reduced.matches||!desktop.matches)return;
     const r=wall.getBoundingClientRect(),x=(event.clientX-r.left)/r.width-.5,y=(event.clientY-r.top)/r.height-.5;

@@ -14,7 +14,7 @@ section='''<!-- ============ RECENSIONI CLIENTI ============ -->
 <section class="section client-reviews" id="recensioni" aria-labelledby="client-reviews-title">
  <div class="container">
   <header class="head head--center"><span class="label mono">Le loro parole</span><h2 id="client-reviews-title">Chi ci ha affidato<br>la propria attività.</h2><p class="sub">Le esperienze raccontate dai nostri clienti.</p></header>
-  <div class="review-actions"><button class="btn btn--mint review-all" type="button">Leggi tutte le recensioni</button><button class="review-pause" type="button" aria-pressed="false">Metti in pausa il wall</button></div>
+  <div class="review-actions"><button class="btn btn--mint review-all" type="button">Leggi tutte le recensioni</button></div>
   <p class="review-mobile-hint">Scorri per leggere le esperienze dei clienti →</p>
   <div class="review-wall" role="region" aria-label="Recensioni dei clienti" data-lenis-prevent><div class="review-plane">'''+''.join(cards)+'''</div></div>
   <dialog class="review-dialog" aria-labelledby="review-dialog-title" data-lenis-prevent><div class="review-dialog-head"><h3 id="review-dialog-title">Le parole dei nostri clienti</h3><button type="button" class="review-dialog-close" aria-label="Chiudi recensione">×</button></div><div class="review-dialog-body"></div></dialog>
