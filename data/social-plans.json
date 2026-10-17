@@ -12,7 +12,6 @@
       "price": 1000,
       "description": "Per pubblicare con costanza",
       "reelsPerWeek": 2,
-      "carousel": "1 carosello incluso*",
       "extras": []
     },
     {
@@ -21,7 +20,6 @@
       "price": 1500,
       "description": "Più video e gestione della community",
       "reelsPerWeek": 3,
-      "carousel": "1 carosello incluso*",
       "extras": [
         "Gestione della community"
       ]
@@ -32,14 +30,13 @@
       "price": 2000,
       "description": "Video, community, storie e report",
       "reelsPerWeek": 4,
-      "carousel": "1 carosello incluso*",
       "extras": [
         "Gestione della community",
         "Storie e reportistica"
       ]
     }
   ],
-  "details": "Le quantità di reel sono settimanali; il canone è mensile. La proposta indica il calendario dei contenuti, la frequenza del carosello, i canali seguiti, le sessioni di ripresa e le revisioni. La gestione della community è inclusa in Smart e Business; storie e reportistica sono incluse in Business. Luogo delle riprese, eventuali trasferte, durata dell’incarico e condizioni di rinnovo o disdetta vengono specificati prima di iniziare.",
+  "details": "Le quantità di reel sono settimanali; il canone è mensile. La proposta indica il calendario dei contenuti, i canali seguiti, le sessioni di ripresa e le revisioni. La gestione della community è inclusa in Smart e Business; storie e reportistica sono incluse in Business. Luogo delle riprese, eventuali trasferte, durata dell’incarico e condizioni di rinnovo o disdetta vengono specificati prima di iniziare.",
   "taxNote": "Importi mensili di partenza. IVA non applicata, regime forfettario. Il prezzo definitivo dipende dalle attività richieste ed è indicato nella proposta.",
-  "carouselNote": "* La frequenza del carosello è indicata nella proposta."
+  "reelsNote": "* Per i profili avviati da poco non prevediamo caroselli. Se il tuo profilo è già avviato, richiedi un preventivo personalizzato."
 }
