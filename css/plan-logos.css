@@ -1,0 +1,16 @@
+/* The same three brand treatments appear in both package layouts. */
+.plan-brand{display:flex;align-items:center;justify-content:center;width:160px;height:112px;flex:none}
+.plan-brand__image{display:block;width:142px;height:112px;max-width:none;object-fit:contain}
+.plan-brand--base .plan-brand__image{filter:grayscale(1) brightness(0) invert(1)}
+.plan-brand--smart .plan-brand__image{filter:drop-shadow(0 8px 18px #0be6a51a)}
+.plan-brand--business .plan-brand__image{width:200px;height:112px;filter:drop-shadow(0 8px 20px #0be6a522)}
+.plan>.plan-brand{margin-bottom:20px}
+.plan>.plan-brand+h3{margin-top:0}
+.pack .pack__head{min-height:216px;gap:16px;background:#0b0f0e;color:#f5f7f6}
+.pack--base .pack__head{background:linear-gradient(145deg,#1d211f,#090b0a)}
+.pack--smart .pack__head{background:radial-gradient(ellipse at 50% 10%,#153d2e,#0b1511 75%)}
+.pack--smart .pack__name{color:#0be6a5}
+.pack--business .pack__head{background:radial-gradient(ellipse at 50% 35%,#18332f,#080d0e 75%)}
+.pack--business .pack__name{color:#b5f5e5}
+.pack .pack__name small{color:#f5f7f6}
+@media(max-width:480px){.pack .pack__head{min-height:204px}}
